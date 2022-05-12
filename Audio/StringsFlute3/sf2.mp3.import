@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/sf2.mp3-b1148ad278a4a637fe7d1f35c8b4b84b.mp3str"
+
+[deps]
+
+source_file="res://Audio/StringsFlute3/sf2.mp3"
+dest_files=[ "res://.import/sf2.mp3-b1148ad278a4a637fe7d1f35c8b4b84b.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,96 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Scripts/Cutscene/CupCutscene.cs" type="Script" id=1]
+[ext_resource path="res://Seagram.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Scripts/ScrollingText.cs" type="Script" id=3]
+[ext_resource path="res://Textures/Cutscene/Castle.jpg" type="Texture" id=4]
+[ext_resource path="res://Audio/StringsFlute3/sf2.mp3" type="AudioStream" id=5]
+[ext_resource path="res://Audio/StringsFlute3/sf3.mp3" type="AudioStream" id=6]
+[ext_resource path="res://Audio/StringsFlute3/sf1.mp3" type="AudioStream" id=7]
+[ext_resource path="res://Audio/StringsFlute3/sf2.5.mp3" type="AudioStream" id=8]
+[ext_resource path="res://Audio/StringsFlute3/sf1.5.mp3" type="AudioStream" id=9]
+
+[sub_resource type="DynamicFont" id=1]
+size = 30
+font_data = ExtResource( 2 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "FadeIn"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ) ]
+}
+
+[node name="TestCutscene" type="Node2D"]
+script = ExtResource( 1 )
+CUTSCENE = 5
+
+[node name="CutsceneBG" type="Sprite" parent="."]
+scale = Vector2( 0.26, 0.26 )
+texture = ExtResource( 4 )
+
+[node name="TextBox" type="Node2D" parent="."]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="TextBox"]
+margin_left = -450.0
+margin_top = 170.0
+margin_right = 450.0
+margin_bottom = 270.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="TextBox"]
+margin_left = -445.0
+margin_top = 175.0
+margin_right = 445.0
+margin_bottom = 265.0
+color = Color( 0.466667, 0.466667, 0.466667, 0.776471 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollingText" type="Label" parent="."]
+margin_left = -440.0
+margin_top = 180.0
+margin_right = 440.0
+margin_bottom = 260.0
+custom_fonts/font = SubResource( 1 )
+autowrap = true
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+secPerCharacter = 0.05
+secsPerSound = 0.08
+playSound = true
+audios = [ ExtResource( 7 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 9 ), ExtResource( 8 ) ]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+scale = Vector2( 32, 19 )
+
+[node name="FadeToBlack" type="ColorRect" parent="."]
+visible = false
+margin_left = -1000.0
+margin_top = -1000.0
+margin_right = 1000.0
+margin_bottom = 1000.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fader" type="AnimationPlayer" parent="FadeToBlack"]
+anims/FadeIn = SubResource( 2 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

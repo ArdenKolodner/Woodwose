@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/synvoice3.mp3-05e0b014c317904e91ba7b36d7b08321.mp3str"
+
+[deps]
+
+source_file="res://Audio/SyntheticVoice/synvoice3.mp3"
+dest_files=[ "res://.import/synvoice3.mp3-05e0b014c317904e91ba7b36d7b08321.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

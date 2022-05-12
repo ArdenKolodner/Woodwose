@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/_bg combat Tilt!.mp3-ae322f2ec3fc7de91429b12d13f0ec55.mp3str"
+
+[deps]
+
+source_file="res://Audio/_bg combat Tilt!.mp3"
+dest_files=[ "res://.import/_bg combat Tilt!.mp3-ae322f2ec3fc7de91429b12d13f0ec55.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,3144 @@
+[gd_scene load_steps=100 format=2]
+
+[ext_resource path="res://Scripts/CutscenePlayer.cs" type="Script" id=1]
+[ext_resource path="res://Scripts/InteractLabel.cs" type="Script" id=2]
+[ext_resource path="res://Scripts/CameraMovement.cs" type="Script" id=3]
+[ext_resource path="res://Textures/Player naked small.png" type="Texture" id=4]
+[ext_resource path="res://Scenes/Tree.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Seagram.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://Scripts/MenuItem.cs" type="Script" id=7]
+[ext_resource path="res://Scripts/ScrollingText.cs" type="Script" id=8]
+[ext_resource path="res://Scripts/Player_KinematicBody2D.cs" type="Script" id=9]
+[ext_resource path="res://Textures/treestump2.png" type="Texture" id=10]
+[ext_resource path="res://Scripts/CraftingMenu.cs" type="Script" id=11]
+[ext_resource path="res://Scripts/CraftMenuSectionButton.cs" type="Script" id=12]
+[ext_resource path="res://Scripts/CraftButton.cs" type="Script" id=13]
+[ext_resource path="res://Textures/parchmentTexture.png" type="Texture" id=14]
+[ext_resource path="res://Scripts/Inventory.cs" type="Script" id=15]
+[ext_resource path="res://Textures/feathers.png" type="Texture" id=16]
+[ext_resource path="res://Scripts/InventoryObject.cs" type="Script" id=17]
+[ext_resource path="res://Textures/nullsquare.png" type="Texture" id=18]
+[ext_resource path="res://Textures/arrow.png" type="Texture" id=19]
+[ext_resource path="res://Scripts/WeaponController.cs" type="Script" id=20]
+[ext_resource path="res://Scripts/OverallMethods.cs" type="Script" id=21]
+[ext_resource path="res://Scripts/MemoryText/WhoAmI.cs" type="Script" id=22]
+[ext_resource path="res://Scripts/MemoriesScreen.cs" type="Script" id=23]
+[ext_resource path="res://Scripts/ArrowCount.cs" type="Script" id=24]
+[ext_resource path="res://Scripts/MemoryText/WhyAmIHere.cs" type="Script" id=25]
+[ext_resource path="res://Audio/SFX - Crafted.mp3" type="AudioStream" id=26]
+[ext_resource path="res://Textures/meat.png" type="Texture" id=27]
+[ext_resource path="res://Scripts/BGAudioStreamPlayer.cs" type="Script" id=28]
+[ext_resource path="res://Audio/_bg2 Tower'd Camelot.mp3" type="AudioStream" id=29]
+[ext_resource path="res://Audio/SFX - memory.mp3" type="AudioStream" id=30]
+[ext_resource path="res://Audio/_bg combat Tilt!.mp3" type="AudioStream" id=31]
+[ext_resource path="res://Audio/_bg1 Feast of Pentecost.mp3" type="AudioStream" id=32]
+[ext_resource path="res://Scripts/Hints.cs" type="Script" id=33]
+[ext_resource path="res://Textures/ArrowBulb.png" type="Texture" id=34]
+[ext_resource path="res://Textures/HintRect2.png" type="Texture" id=35]
+[ext_resource path="res://Scripts/CampfireSprite.cs" type="Script" id=36]
+[ext_resource path="res://Textures/campfire lit 2.png" type="Texture" id=37]
+[ext_resource path="res://Textures/campfire lit 1.png" type="Texture" id=38]
+[ext_resource path="res://Textures/campfire lit 3.png" type="Texture" id=39]
+[ext_resource path="res://Textures/campfire unlit.png" type="Texture" id=40]
+[ext_resource path="res://Scripts/Campfire.cs" type="Script" id=41]
+[ext_resource path="res://Textures/axe.png" type="Texture" id=42]
+[ext_resource path="res://Scripts/CutsceneObject.cs" type="Script" id=43]
+[ext_resource path="res://Textures/cup.png" type="Texture" id=44]
+[ext_resource path="res://Textures/ring.png" type="Texture" id=45]
+[ext_resource path="res://Textures/knife.png" type="Texture" id=46]
+[ext_resource path="res://Textures/bow.png" type="Texture" id=47]
+[ext_resource path="res://Textures/rock.png" type="Texture" id=48]
+[ext_resource path="res://Textures/wood.png" type="Texture" id=49]
+[ext_resource path="res://Scripts/InventoryArmor.cs" type="Script" id=50]
+[ext_resource path="res://Textures/fist.png" type="Texture" id=51]
+[ext_resource path="res://Scripts/InventoryWeapon.cs" type="Script" id=52]
+[ext_resource path="res://Textures/iron ore.png" type="Texture" id=53]
+[ext_resource path="res://Textures/sticks.png" type="Texture" id=54]
+[ext_resource path="res://Textures/sharp rock.png" type="Texture" id=55]
+[ext_resource path="res://Textures/fabric.png" type="Texture" id=56]
+[ext_resource path="res://Textures/cooked meat.png" type="Texture" id=57]
+[ext_resource path="res://Textures/wheat.png" type="Texture" id=58]
+[ext_resource path="res://Textures/club.png" type="Texture" id=59]
+[ext_resource path="res://Textures/sword.png" type="Texture" id=60]
+[ext_resource path="res://Scenes/Bush1.tscn" type="PackedScene" id=61]
+[ext_resource path="res://Scenes/Bush3.tscn" type="PackedScene" id=62]
+[ext_resource path="res://Scenes/Bush2.tscn" type="PackedScene" id=63]
+[ext_resource path="res://Scenes/Pickup/Wheat.tscn" type="PackedScene" id=64]
+[ext_resource path="res://Scenes/Pickup/Stick.tscn" type="PackedScene" id=65]
+[ext_resource path="res://Scenes/Pickup/Flint.tscn" type="PackedScene" id=66]
+[ext_resource path="res://Scenes/Pickup/SharpRock.tscn" type="PackedScene" id=67]
+[ext_resource path="res://Scenes/Chicken.tscn" type="PackedScene" id=68]
+[ext_resource path="res://Scenes/Pickup/Iron.tscn" type="PackedScene" id=69]
+[ext_resource path="res://Scenes/Pickup/Rock.tscn" type="PackedScene" id=70]
+[ext_resource path="res://Scenes/Wolf.tscn" type="PackedScene" id=71]
+[ext_resource path="res://Textures/ArrowStraight.png" type="Texture" id=72]
+[ext_resource path="res://Scripts/CraftingFinder.cs" type="Script" id=73]
+[ext_resource path="res://Textures/rope.png" type="Texture" id=74]
+
+[sub_resource type="RectangleShape2D" id=25]
+extents = Vector2( 9.61005, 9.87506 )
+
+[sub_resource type="CircleShape2D" id=26]
+
+[sub_resource type="AnimatedTexture" id=21]
+flags = 4
+frames = 3
+fps = 6.0
+frame_0/texture = ExtResource( 38 )
+frame_1/texture = ExtResource( 37 )
+frame_1/delay_sec = 0.0
+frame_2/texture = ExtResource( 39 )
+frame_2/delay_sec = 0.0
+
+[sub_resource type="RectangleShape2D" id=22]
+extents = Vector2( 28, 13 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 27, 26 )
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 35, 9.5 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 32
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=5]
+font_data = ExtResource( 6 )
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 23.1543, 6.28062 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 30
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=27]
+size = 60
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=24]
+size = 30
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 20
+font_data = ExtResource( 6 )
+
+[sub_resource type="Animation" id=16]
+resource_name = "ShowAttack"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Attack:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=20]
+resource_name = "ShowCraft"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Craft:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=19]
+resource_name = "ShowEat"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Eat:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=17]
+resource_name = "ShowInventory"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Inventory:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=18]
+resource_name = "ShowMemory"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Memory:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=14]
+resource_name = "ShowMove"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Move:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=15]
+resource_name = "ShowSprint"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprint:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=23]
+resource_name = "ShowSwitchWeapons"
+tracks/0/type = "value"
+tracks/0/path = NodePath("SwitchWeapons:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="LineShape2D" id=28]
+
+[sub_resource type="LineShape2D" id=29]
+
+[sub_resource type="Animation" id=12]
+resource_name = "VolumeFadeIn1Sec"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:volume_db")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -80.0, 0.0 ]
+}
+
+[sub_resource type="Animation" id=13]
+resource_name = "VolumeFadeOut1Sec"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:volume_db")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, -80.0 ]
+}
+
+[node name="Game" type="Node2D"]
+script = ExtResource( 21 )
+
+[node name="CutsceneCup" type="Area2D" parent="."]
+position = Vector2( -2143, 2303 )
+collision_mask = 5
+script = ExtResource( 43 )
+CUTSCENE = 7
+
+[node name="Sprite (Modulated)" type="Sprite" parent="CutsceneCup"]
+modulate = Color( 0.32549, 0.32549, 0.32549, 1 )
+rotation = 1.21126
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 44 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CutsceneCup"]
+position = Vector2( 2.35519, -0.885254 )
+rotation = 1.21126
+shape = SubResource( 25 )
+
+[node name="CutsceneRing" type="Area2D" parent="."]
+position = Vector2( 2217, -2148 )
+collision_mask = 5
+script = ExtResource( 43 )
+CUTSCENE = 8
+
+[node name="Sprite (Modulated)" type="Sprite" parent="CutsceneRing"]
+modulate = Color( 0.784314, 0.784314, 0.784314, 1 )
+rotation = -1.72788
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 45 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CutsceneRing"]
+position = Vector2( 3, -0.5 )
+rotation = 1.21126
+shape = SubResource( 26 )
+
+[node name="Campfire" type="Area2D" parent="."]
+position = Vector2( -300, -190 )
+collision_mask = 5
+script = ExtResource( 41 )
+woodCount = 8
+sticksCount = 4
+flintCount = 3
+
+[node name="Sprite" type="Sprite" parent="Campfire"]
+scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 40 )
+script = ExtResource( 36 )
+litTexture = SubResource( 21 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Campfire"]
+position = Vector2( 4, 20 )
+shape = SubResource( 22 )
+
+[node name="CraftingStump" type="Area2D" parent="."]
+position = Vector2( 260, 185 )
+collision_mask = 5
+script = ExtResource( 7 )
+menu = 1
+interactText = "E: Craft"
+
+[node name="Sprite" type="Sprite" parent="CraftingStump"]
+scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 10 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CraftingStump"]
+position = Vector2( 0, 4 )
+shape = SubResource( 4 )
+
+[node name="Trees" type="Node2D" parent="."]
+
+[node name="Tree" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( -42, 96 )
+
+[node name="Tree2" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( 56, -168 )
+
+[node name="Tree3" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( -385, -57 )
+
+[node name="Tree4" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( -261, 228 )
+
+[node name="Tree5" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( -247, -278 )
+
+[node name="Tree6" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( 298, 10 )
+
+[node name="Tree7" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( 306, 448 )
+
+[node name="Tree8" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( -142, 527 )
+
+[node name="Tree9" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( -670, 557 )
+
+[node name="Tree10" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( -824, 216 )
+
+[node name="Tree11" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( -782, -212 )
+
+[node name="Tree12" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( -411, -554 )
+
+[node name="Tree13" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( 11, -548 )
+
+[node name="Tree14" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( 134, -408 )
+
+[node name="Tree15" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( 451, -366 )
+
+[node name="Tree16" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( 676, -177 )
+
+[node name="Tree17" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( 641, 289 )
+
+[node name="Tree18" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( -561, 182 )
+
+[node name="Tree19" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( -399, 564 )
+
+[node name="Tree20" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( -211, 707 )
+
+[node name="Tree21" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( -750, 857 )
+
+[node name="Tree22" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( -1031, 500 )
+
+[node name="Tree23" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( -1122, -97 )
+
+[node name="Tree24" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( -894, -486 )
+
+[node name="Tree25" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( -225, -793 )
+
+[node name="Tree26" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( -670, -742 )
+
+[node name="Tree27" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( 301, -733 )
+
+[node name="Tree28" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( 781, -562 )
+
+[node name="Tree29" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( 983, -45 )
+
+[node name="Tree30" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( 799, 699 )
+
+[node name="Tree31" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( 311, 863 )
+
+[node name="Tree32" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( -301, 1038 )
+
+[node name="Tree33" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( -759, 1225 )
+
+[node name="Tree34" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( -1284, 979 )
+
+[node name="Tree35" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( -1313, 1351 )
+
+[node name="Tree36" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( -1412, 626 )
+
+[node name="Tree37" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( -1377, 223 )
+
+[node name="Tree38" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( -1816, 346 )
+
+[node name="Tree39" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( -1796, 657 )
+
+[node name="Tree40" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( -1723, 1023 )
+
+[node name="Tree41" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( -1699, 1608 )
+
+[node name="Tree42" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( -2036, 1300 )
+
+[node name="Tree43" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( -2051, 870 )
+
+[node name="Tree44" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( -2139, 469 )
+
+[node name="Tree45" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( -2090, 98 )
+
+[node name="Tree46" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( -1673, 64 )
+
+[node name="Tree47" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( -2056, 1808 )
+
+[node name="Tree53" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( -1520, -445 )
+
+[node name="Tree54" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( -2022, -398 )
+
+[node name="Tree55" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( -2458, 685 )
+
+[node name="Tree48" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( -1542, 2198 )
+
+[node name="Tree49" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( -915, 2434 )
+
+[node name="Tree50" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( -108, 2489 )
+
+[node name="Tree51" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( 940, 2348 )
+
+[node name="Tree52" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( 444, 1770 )
+
+[node name="Tree56" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( 1594, 1817 )
+
+[node name="Tree57" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( 1681, 1043 )
+
+[node name="Tree58" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( 1776, 344 )
+
+[node name="Tree59" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( 1659, -323 )
+
+[node name="Tree60" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( 1434, -776 )
+
+[node name="Tree61" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( 2069, -1014 )
+
+[node name="Tree62" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( 1574, -1515 )
+
+[node name="Tree63" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( 1175, -1997 )
+
+[node name="Tree64" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( 2096, 2022 )
+
+[node name="Tree65" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( 2267, 2332 )
+
+[node name="Tree66" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( -2287, 2239 )
+
+[node name="Tree67" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( -2427, 1479 )
+
+[node name="Tree68" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( -1118, 1849 )
+
+[node name="Tree69" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( -706, 1676 )
+
+[node name="Tree70" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( -584, 2067 )
+
+[node name="Tree71" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( -314, 1547 )
+
+[node name="Tree72" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( -153, 2100 )
+
+[node name="Tree73" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( -16, 1375 )
+
+[node name="Tree74" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( -27, 934 )
+
+[node name="Tree75" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( 5, 1737 )
+
+[node name="Tree76" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( 224, 2161 )
+
+[node name="Tree77" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( 328, 1253 )
+
+[node name="Tree78" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( 690, 1049 )
+
+[node name="Tree79" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( 780, 1452 )
+
+[node name="Tree80" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( 1049, 1800 )
+
+[node name="Tree81" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( 1210, 1150 )
+
+[node name="Tree82" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( 1673, 1451 )
+
+[node name="Tree83" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( 1192, 510 )
+
+[node name="Tree84" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( 1253, 102 )
+
+[node name="Tree85" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( 1167, -423 )
+
+[node name="Tree86" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( 870, -939 )
+
+[node name="Tree87" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( 342, -1086 )
+
+[node name="Tree88" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( -174, -1176 )
+
+[node name="Tree89" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( -698, -1172 )
+
+[node name="Tree90" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( -1239, -871 )
+
+[node name="Tree91" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( -2274, -1780 )
+
+[node name="Tree92" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( -2310, -1128 )
+
+[node name="Tree93" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( -2390, -500 )
+
+[node name="Tree94" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( -2393, 142 )
+
+[node name="Tree95" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( 2259, 1573 )
+
+[node name="Tree96" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( 2172, 751 )
+
+[node name="Tree97" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( 2162, -290 )
+
+[node name="Tree98" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( 2363, -2324 )
+
+[node name="Tree99" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( 246, -2142 )
+
+[node name="Tree100" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( -819, -2415 )
+
+[node name="Tree101" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( -2393, -2387 )
+
+[node name="Tree102" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( 317, -1463 )
+
+[node name="Tree103" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( 816, -1423 )
+
+[node name="Tree104" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( 1253, -1237 )
+
+[node name="Tree105" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( -1705, -756 )
+
+[node name="Tree106" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( -1608, -1143 )
+
+[node name="Tree107" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( -1175, -1351 )
+
+[node name="Tree108" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( -719, -1534 )
+
+[node name="Tree109" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( -1831, -1538 )
+
+[node name="Tree110" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( -2046, -900 )
+
+[node name="Tree111" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( -1365, -1674 )
+
+[node name="Tree112" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( -414, -1785 )
+
+[node name="Tree113" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( 357, -1853 )
+
+[node name="Tree114" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( -1720, -1914 )
+
+[node name="Tree115" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( 1031, -1699 )
+
+[node name="Tree116" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( 1723, -1874 )
+
+[node name="Tree117" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( 2204, -1917 )
+
+[node name="Tree118" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( 2218, -1473 )
+
+[node name="Tree119" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( 2143, -505 )
+
+[node name="Tree120" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( 2171, 159 )
+
+[node name="Tree121" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( 1476, 710 )
+
+[node name="Tree122" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( 2042, 1263 )
+
+[node name="Tree123" parent="Trees" instance=ExtResource( 5 )]
+position = Vector2( 1533, 2263 )
+
+[node name="Pickups" type="Node2D" parent="."]
+
+[node name="SharpRock" parent="Pickups" instance=ExtResource( 67 )]
+position = Vector2( -2261, 1648 )
+
+[node name="SharpRock2" parent="Pickups" instance=ExtResource( 67 )]
+position = Vector2( -2106, 300 )
+
+[node name="SharpRock3" parent="Pickups" instance=ExtResource( 67 )]
+position = Vector2( -2113, -1096 )
+
+[node name="SharpRock4" parent="Pickups" instance=ExtResource( 67 )]
+position = Vector2( -1519, -2091 )
+
+[node name="SharpRock5" parent="Pickups" instance=ExtResource( 67 )]
+position = Vector2( 818, -1985 )
+
+[node name="SharpRock6" parent="Pickups" instance=ExtResource( 67 )]
+position = Vector2( 1376, -431 )
+
+[node name="SharpRock7" parent="Pickups" instance=ExtResource( 67 )]
+position = Vector2( 2056, 976 )
+
+[node name="SharpRock8" parent="Pickups" instance=ExtResource( 67 )]
+position = Vector2( 1778, 2057 )
+
+[node name="SharpRock9" parent="Pickups" instance=ExtResource( 67 )]
+position = Vector2( 458, 2251 )
+
+[node name="SharpRock10" parent="Pickups" instance=ExtResource( 67 )]
+position = Vector2( -745, 2257 )
+
+[node name="Stick" parent="Pickups" instance=ExtResource( 65 )]
+position = Vector2( 230, 586 )
+
+[node name="Stick2" parent="Pickups" instance=ExtResource( 65 )]
+position = Vector2( -695, 35 )
+
+[node name="Stick3" parent="Pickups" instance=ExtResource( 65 )]
+position = Vector2( -615, 706 )
+
+[node name="Stick4" parent="Pickups" instance=ExtResource( 65 )]
+position = Vector2( -506, -483 )
+
+[node name="Stick5" parent="Pickups" instance=ExtResource( 65 )]
+position = Vector2( 434, -564 )
+
+[node name="Stick6" parent="Pickups" instance=ExtResource( 65 )]
+position = Vector2( -145, -542 )
+
+[node name="Stick7" parent="Pickups" instance=ExtResource( 65 )]
+position = Vector2( -25, -893 )
+
+[node name="Stick8" parent="Pickups" instance=ExtResource( 65 )]
+position = Vector2( 32, -902 )
+
+[node name="Stick9" parent="Pickups" instance=ExtResource( 65 )]
+position = Vector2( 469, 512 )
+
+[node name="Stick10" parent="Pickups" instance=ExtResource( 65 )]
+position = Vector2( 938, 276 )
+
+[node name="Stick11" parent="Pickups" instance=ExtResource( 65 )]
+position = Vector2( -641, 382 )
+
+[node name="Stick12" parent="Pickups" instance=ExtResource( 65 )]
+position = Vector2( -1217, 392 )
+
+[node name="Stick13" parent="Pickups" instance=ExtResource( 65 )]
+position = Vector2( -1090, -387 )
+
+[node name="Stick14" parent="Pickups" instance=ExtResource( 65 )]
+position = Vector2( 260, -516 )
+
+[node name="Stick15" parent="Pickups" instance=ExtResource( 65 )]
+position = Vector2( 1035, -242 )
+
+[node name="Stick16" parent="Pickups" instance=ExtResource( 65 )]
+position = Vector2( -202, -407 )
+
+[node name="Stick17" parent="Pickups" instance=ExtResource( 65 )]
+position = Vector2( -1084, -586 )
+
+[node name="Stick18" parent="Pickups" instance=ExtResource( 65 )]
+position = Vector2( -1178, 65 )
+
+[node name="Stick19" parent="Pickups" instance=ExtResource( 65 )]
+position = Vector2( -380, 400 )
+
+[node name="Stick20" parent="Pickups" instance=ExtResource( 65 )]
+position = Vector2( -238, 400 )
+
+[node name="Stick21" parent="Pickups" instance=ExtResource( 65 )]
+position = Vector2( 241, -195 )
+
+[node name="Stick22" parent="Pickups" instance=ExtResource( 65 )]
+position = Vector2( 1197, 935 )
+
+[node name="Stick23" parent="Pickups" instance=ExtResource( 65 )]
+position = Vector2( 163, 1053 )
+
+[node name="Stick24" parent="Pickups" instance=ExtResource( 65 )]
+position = Vector2( 519, 1522 )
+
+[node name="Stick25" parent="Pickups" instance=ExtResource( 65 )]
+position = Vector2( 187, 1862 )
+
+[node name="Stick26" parent="Pickups" instance=ExtResource( 65 )]
+position = Vector2( -1449, 400 )
+
+[node name="Stick27" parent="Pickups" instance=ExtResource( 65 )]
+position = Vector2( -1588, 274 )
+
+[node name="Stick28" parent="Pickups" instance=ExtResource( 65 )]
+position = Vector2( -1682, 378 )
+
+[node name="Stick29" parent="Pickups" instance=ExtResource( 65 )]
+position = Vector2( -1580, 485 )
+
+[node name="Stick30" parent="Pickups" instance=ExtResource( 65 )]
+position = Vector2( -881, -718 )
+
+[node name="Flint" parent="Pickups" instance=ExtResource( 66 )]
+position = Vector2( -836, -1711 )
+
+[node name="Flint2" parent="Pickups" instance=ExtResource( 66 )]
+position = Vector2( 1326, -1671 )
+
+[node name="Flint3" parent="Pickups" instance=ExtResource( 66 )]
+position = Vector2( 106, -1301 )
+
+[node name="Flint4" parent="Pickups" instance=ExtResource( 66 )]
+position = Vector2( -1282, -686 )
+
+[node name="Flint5" parent="Pickups" instance=ExtResource( 66 )]
+position = Vector2( 1047, -805 )
+
+[node name="Flint6" parent="Pickups" instance=ExtResource( 66 )]
+position = Vector2( 1743, -588 )
+
+[node name="Flint7" parent="Pickups" instance=ExtResource( 66 )]
+position = Vector2( 1420, -34 )
+
+[node name="Flint8" parent="Pickups" instance=ExtResource( 66 )]
+position = Vector2( -1397, -34 )
+
+[node name="Flint9" parent="Pickups" instance=ExtResource( 66 )]
+position = Vector2( -1789, -302 )
+
+[node name="Flint10" parent="Pickups" instance=ExtResource( 66 )]
+position = Vector2( -1186, 707 )
+
+[node name="Flint11" parent="Pickups" instance=ExtResource( 66 )]
+position = Vector2( -573, 1038 )
+
+[node name="Flint12" parent="Pickups" instance=ExtResource( 66 )]
+position = Vector2( -939, -1882 )
+
+[node name="Flint13" parent="Pickups" instance=ExtResource( 66 )]
+position = Vector2( -865, -1854 )
+
+[node name="Rock" parent="Pickups" instance=ExtResource( 70 )]
+position = Vector2( -1859, 1975 )
+
+[node name="Rock2" parent="Pickups" instance=ExtResource( 70 )]
+position = Vector2( -1842, 1328 )
+
+[node name="Rock3" parent="Pickups" instance=ExtResource( 70 )]
+position = Vector2( -874, 706 )
+
+[node name="Rock4" parent="Pickups" instance=ExtResource( 70 )]
+position = Vector2( -963, 314 )
+
+[node name="Rock5" parent="Pickups" instance=ExtResource( 70 )]
+position = Vector2( -1246, 586 )
+
+[node name="Rock6" parent="Pickups" instance=ExtResource( 70 )]
+position = Vector2( -413, 936 )
+
+[node name="Rock7" parent="Pickups" instance=ExtResource( 70 )]
+position = Vector2( -360, 1225 )
+
+[node name="Rock8" parent="Pickups" instance=ExtResource( 70 )]
+position = Vector2( -912, 1404 )
+
+[node name="Rock9" parent="Pickups" instance=ExtResource( 70 )]
+position = Vector2( -2481, 1225 )
+
+[node name="Rock10" parent="Pickups" instance=ExtResource( 70 )]
+position = Vector2( -187, 860 )
+
+[node name="Rock11" parent="Pickups" instance=ExtResource( 70 )]
+position = Vector2( -269, 1864 )
+
+[node name="Rock12" parent="Pickups" instance=ExtResource( 70 )]
+position = Vector2( -651, 1457 )
+
+[node name="Rock13" parent="Pickups" instance=ExtResource( 70 )]
+position = Vector2( 270, 1423 )
+
+[node name="Rock14" parent="Pickups" instance=ExtResource( 70 )]
+position = Vector2( 658, 641 )
+
+[node name="Rock15" parent="Pickups" instance=ExtResource( 70 )]
+position = Vector2( 122, 734 )
+
+[node name="Rock16" parent="Pickups" instance=ExtResource( 70 )]
+position = Vector2( 875, 95 )
+
+[node name="Rock17" parent="Pickups" instance=ExtResource( 70 )]
+position = Vector2( 966, 572 )
+
+[node name="Rock18" parent="Pickups" instance=ExtResource( 70 )]
+position = Vector2( 426, 161 )
+
+[node name="Rock19" parent="Pickups" instance=ExtResource( 70 )]
+position = Vector2( 1503, 313 )
+
+[node name="Rock20" parent="Pickups" instance=ExtResource( 70 )]
+position = Vector2( 1735, 699 )
+
+[node name="Rock21" parent="Pickups" instance=ExtResource( 70 )]
+position = Vector2( 1813, 1281 )
+
+[node name="Rock22" parent="Pickups" instance=ExtResource( 70 )]
+position = Vector2( 1206, 1688 )
+
+[node name="Rock23" parent="Pickups" instance=ExtResource( 70 )]
+position = Vector2( 630, 866 )
+
+[node name="Rock24" parent="Pickups" instance=ExtResource( 70 )]
+position = Vector2( 151, 375 )
+
+[node name="Rock25" parent="Pickups" instance=ExtResource( 70 )]
+position = Vector2( 674, -414 )
+
+[node name="Rock26" parent="Pickups" instance=ExtResource( 70 )]
+position = Vector2( 729, -804 )
+
+[node name="Rock27" parent="Pickups" instance=ExtResource( 70 )]
+position = Vector2( 573, -1076 )
+
+[node name="Rock28" parent="Pickups" instance=ExtResource( 70 )]
+position = Vector2( 560, -1512 )
+
+[node name="Rock29" parent="Pickups" instance=ExtResource( 70 )]
+position = Vector2( 1498, -987 )
+
+[node name="Rock30" parent="Pickups" instance=ExtResource( 70 )]
+position = Vector2( 1787, -1103 )
+
+[node name="Rock31" parent="Pickups" instance=ExtResource( 70 )]
+position = Vector2( 201, -915 )
+
+[node name="Rock32" parent="Pickups" instance=ExtResource( 70 )]
+position = Vector2( 435, -938 )
+
+[node name="Rock33" parent="Pickups" instance=ExtResource( 70 )]
+position = Vector2( 597, -649 )
+
+[node name="Rock34" parent="Pickups" instance=ExtResource( 70 )]
+position = Vector2( 405, -1697 )
+
+[node name="Rock35" parent="Pickups" instance=ExtResource( 70 )]
+position = Vector2( 620, -1861 )
+
+[node name="Rock36" parent="Pickups" instance=ExtResource( 70 )]
+position = Vector2( 1280, -1834 )
+
+[node name="Rock37" parent="Pickups" instance=ExtResource( 70 )]
+position = Vector2( 1723, -1676 )
+
+[node name="Rock38" parent="Pickups" instance=ExtResource( 70 )]
+position = Vector2( 1839, -2089 )
+
+[node name="Rock39" parent="Pickups" instance=ExtResource( 70 )]
+position = Vector2( -242, -1998 )
+
+[node name="Rock40" parent="Pickups" instance=ExtResource( 70 )]
+position = Vector2( -402, -1540 )
+
+[node name="Rock41" parent="Pickups" instance=ExtResource( 70 )]
+position = Vector2( -651, -2046 )
+
+[node name="Rock42" parent="Pickups" instance=ExtResource( 70 )]
+position = Vector2( -874, -1350 )
+
+[node name="Rock43" parent="Pickups" instance=ExtResource( 70 )]
+position = Vector2( -355, -909 )
+
+[node name="Rock44" parent="Pickups" instance=ExtResource( 70 )]
+position = Vector2( -711, -532 )
+
+[node name="Rock45" parent="Pickups" instance=ExtResource( 70 )]
+position = Vector2( -926, -100 )
+
+[node name="Rock46" parent="Pickups" instance=ExtResource( 70 )]
+position = Vector2( -456, -241 )
+
+[node name="Rock47" parent="Pickups" instance=ExtResource( 70 )]
+position = Vector2( -1510, -686 )
+
+[node name="Rock48" parent="Pickups" instance=ExtResource( 70 )]
+position = Vector2( -2031, -713 )
+
+[node name="Rock49" parent="Pickups" instance=ExtResource( 70 )]
+position = Vector2( -2208, -426 )
+
+[node name="Rock50" parent="Pickups" instance=ExtResource( 70 )]
+position = Vector2( -2322, -869 )
+
+[node name="Rock51" parent="Pickups" instance=ExtResource( 70 )]
+position = Vector2( -1839, -1305 )
+
+[node name="Rock52" parent="Pickups" instance=ExtResource( 70 )]
+position = Vector2( -1350, -1143 )
+
+[node name="Rock53" parent="Pickups" instance=ExtResource( 70 )]
+position = Vector2( -1837, -1719 )
+
+[node name="Iron" parent="Pickups" instance=ExtResource( 69 )]
+position = Vector2( -2333, -751 )
+
+[node name="Iron2" parent="Pickups" instance=ExtResource( 69 )]
+position = Vector2( -2397, -686 )
+
+[node name="Iron3" parent="Pickups" instance=ExtResource( 69 )]
+position = Vector2( -2328, -199 )
+
+[node name="Iron4" parent="Pickups" instance=ExtResource( 69 )]
+position = Vector2( -2300, 1207 )
+
+[node name="Iron5" parent="Pickups" instance=ExtResource( 69 )]
+position = Vector2( -2147, 2122 )
+
+[node name="Iron6" parent="Pickups" instance=ExtResource( 69 )]
+position = Vector2( -1215, 2324 )
+
+[node name="Iron7" parent="Pickups" instance=ExtResource( 69 )]
+position = Vector2( -457, 2401 )
+
+[node name="Iron8" parent="Pickups" instance=ExtResource( 69 )]
+position = Vector2( 51, 2225 )
+
+[node name="Iron9" parent="Pickups" instance=ExtResource( 69 )]
+position = Vector2( 605, 2378 )
+
+[node name="Iron10" parent="Pickups" instance=ExtResource( 69 )]
+position = Vector2( 1318, 2208 )
+
+[node name="Iron11" parent="Pickups" instance=ExtResource( 69 )]
+position = Vector2( 2054, 2299 )
+
+[node name="Iron12" parent="Pickups" instance=ExtResource( 69 )]
+position = Vector2( 1881, 802 )
+
+[node name="Iron13" parent="Pickups" instance=ExtResource( 69 )]
+position = Vector2( 2026, 279 )
+
+[node name="Iron14" parent="Pickups" instance=ExtResource( 69 )]
+position = Vector2( 1941, -582 )
+
+[node name="Iron15" parent="Pickups" instance=ExtResource( 69 )]
+position = Vector2( 2072, -1238 )
+
+[node name="Iron16" parent="Pickups" instance=ExtResource( 69 )]
+position = Vector2( 2029, -1976 )
+
+[node name="Iron17" parent="Pickups" instance=ExtResource( 69 )]
+position = Vector2( 1418, -2047 )
+
+[node name="Iron18" parent="Pickups" instance=ExtResource( 69 )]
+position = Vector2( 955, -2073 )
+
+[node name="Iron19" parent="Pickups" instance=ExtResource( 69 )]
+position = Vector2( -93, -2118 )
+
+[node name="Iron20" parent="Pickups" instance=ExtResource( 69 )]
+position = Vector2( -1135, -2127 )
+
+[node name="Iron21" parent="Pickups" instance=ExtResource( 69 )]
+position = Vector2( -1811, -2084 )
+
+[node name="Iron22" parent="Pickups" instance=ExtResource( 69 )]
+position = Vector2( -2192, -2385 )
+
+[node name="Iron23" parent="Pickups" instance=ExtResource( 69 )]
+position = Vector2( -2218, -2198 )
+
+[node name="Iron24" parent="Pickups" instance=ExtResource( 69 )]
+position = Vector2( -2099, -2297 )
+
+[node name="Iron25" parent="Pickups" instance=ExtResource( 69 )]
+position = Vector2( -2238, -1456 )
+
+[node name="Iron26" parent="Pickups" instance=ExtResource( 69 )]
+position = Vector2( -2181, -618 )
+
+[node name="Iron27" parent="Pickups" instance=ExtResource( 69 )]
+position = Vector2( -2476, -98 )
+
+[node name="Iron28" parent="Pickups" instance=ExtResource( 69 )]
+position = Vector2( -2297, 831 )
+
+[node name="Iron29" parent="Pickups" instance=ExtResource( 69 )]
+position = Vector2( -1968, 1078 )
+
+[node name="Iron30" parent="Pickups" instance=ExtResource( 69 )]
+position = Vector2( 1937, 1891 )
+
+[node name="Wheat" type="Node2D" parent="."]
+
+[node name="Wheat" parent="Wheat" instance=ExtResource( 64 )]
+position = Vector2( -1575, 622 )
+
+[node name="Wheat2" parent="Wheat" instance=ExtResource( 64 )]
+position = Vector2( -1628, 663 )
+
+[node name="Wheat3" parent="Wheat" instance=ExtResource( 64 )]
+position = Vector2( -1613, 579 )
+
+[node name="Wheat4" parent="Wheat" instance=ExtResource( 64 )]
+position = Vector2( -1371, -329 )
+
+[node name="Wheat5" parent="Wheat" instance=ExtResource( 64 )]
+position = Vector2( -1342, -298 )
+
+[node name="Wheat6" parent="Wheat" instance=ExtResource( 64 )]
+position = Vector2( -951, -994 )
+
+[node name="Wheat7" parent="Wheat" instance=ExtResource( 64 )]
+position = Vector2( -916, -953 )
+
+[node name="Wheat8" parent="Wheat" instance=ExtResource( 64 )]
+position = Vector2( -989, -941 )
+
+[node name="Wheat9" parent="Wheat" instance=ExtResource( 64 )]
+position = Vector2( -947, -899 )
+
+[node name="Wheat10" parent="Wheat" instance=ExtResource( 64 )]
+position = Vector2( 967, 323 )
+
+[node name="Wheat11" parent="Wheat" instance=ExtResource( 64 )]
+position = Vector2( 1015, 300 )
+
+[node name="Wheat12" parent="Wheat" instance=ExtResource( 64 )]
+position = Vector2( 985, 257 )
+
+[node name="Wheat13" parent="Wheat" instance=ExtResource( 64 )]
+position = Vector2( 1542, 1265 )
+
+[node name="Wheat14" parent="Wheat" instance=ExtResource( 64 )]
+position = Vector2( 1254, 1438 )
+
+[node name="Wheat15" parent="Wheat" instance=ExtResource( 64 )]
+position = Vector2( 437, 1073 )
+
+[node name="Wheat16" parent="Wheat" instance=ExtResource( 64 )]
+position = Vector2( 504, 1046 )
+
+[node name="Wheat17" parent="Wheat" instance=ExtResource( 64 )]
+position = Vector2( 456, 998 )
+
+[node name="Wheat18" parent="Wheat" instance=ExtResource( 64 )]
+position = Vector2( 1018, -1180 )
+
+[node name="Wheat19" parent="Wheat" instance=ExtResource( 64 )]
+position = Vector2( 1075, -1219 )
+
+[node name="Wheat20" parent="Wheat" instance=ExtResource( 64 )]
+position = Vector2( 1034, -1266 )
+
+[node name="Wheat21" parent="Wheat" instance=ExtResource( 64 )]
+position = Vector2( 986, -1304 )
+
+[node name="Wheat22" parent="Wheat" instance=ExtResource( 64 )]
+position = Vector2( 1085, -1341 )
+
+[node name="Wheat23" parent="Wheat" instance=ExtResource( 64 )]
+position = Vector2( -907, 1048 )
+
+[node name="Wheat24" parent="Wheat" instance=ExtResource( 64 )]
+position = Vector2( -240, 1332 )
+
+[node name="Wheat25" parent="Wheat" instance=ExtResource( 64 )]
+position = Vector2( -948, 930 )
+
+[node name="Wheat26" parent="Wheat" instance=ExtResource( 64 )]
+position = Vector2( -1092, 916 )
+
+[node name="Wheat27" parent="Wheat" instance=ExtResource( 64 )]
+position = Vector2( -1018, 1121 )
+
+[node name="Wheat28" parent="Wheat" instance=ExtResource( 64 )]
+position = Vector2( -1122, 1036 )
+
+[node name="Wheat29" parent="Wheat" instance=ExtResource( 64 )]
+position = Vector2( -107, -1637 )
+
+[node name="Wheat30" parent="Wheat" instance=ExtResource( 64 )]
+position = Vector2( 61, -1696 )
+
+[node name="Animals" type="Node2D" parent="."]
+
+[node name="Chicken" parent="Animals" instance=ExtResource( 68 )]
+position = Vector2( 1262, 1865 )
+
+[node name="Chicken2" parent="Animals" instance=ExtResource( 68 )]
+position = Vector2( 645, 2084 )
+
+[node name="Chicken3" parent="Animals" instance=ExtResource( 68 )]
+position = Vector2( 1594, 853 )
+
+[node name="Chicken4" parent="Animals" instance=ExtResource( 68 )]
+position = Vector2( 897, 873 )
+
+[node name="Chicken5" parent="Animals" instance=ExtResource( 68 )]
+position = Vector2( 1988, 1493 )
+
+[node name="Chicken6" parent="Animals" instance=ExtResource( 68 )]
+position = Vector2( -511, 1614 )
+
+[node name="Chicken7" parent="Animals" instance=ExtResource( 68 )]
+position = Vector2( -870, 1930 )
+
+[node name="Chicken8" parent="Animals" instance=ExtResource( 68 )]
+position = Vector2( -1442, 1089 )
+
+[node name="Chicken9" parent="Animals" instance=ExtResource( 68 )]
+position = Vector2( -2315, 1851 )
+
+[node name="Chicken10" parent="Animals" instance=ExtResource( 68 )]
+position = Vector2( -1582, 1872 )
+
+[node name="Chicken11" parent="Animals" instance=ExtResource( 68 )]
+position = Vector2( -1871, 841 )
+
+[node name="Chicken12" parent="Animals" instance=ExtResource( 68 )]
+position = Vector2( -1775, -108 )
+
+[node name="Chicken13" parent="Animals" instance=ExtResource( 68 )]
+position = Vector2( -1751, -985 )
+
+[node name="Chicken14" parent="Animals" instance=ExtResource( 68 )]
+position = Vector2( -1634, -1576 )
+
+[node name="Chicken15" parent="Animals" instance=ExtResource( 68 )]
+position = Vector2( -1129, -1621 )
+
+[node name="Chicken16" parent="Animals" instance=ExtResource( 68 )]
+position = Vector2( -620, -2312 )
+
+[node name="Chicken17" parent="Animals" instance=ExtResource( 68 )]
+position = Vector2( 521, -2199 )
+
+[node name="Chicken18" parent="Animals" instance=ExtResource( 68 )]
+position = Vector2( -1363, -1952 )
+
+[node name="Chicken19" parent="Animals" instance=ExtResource( 68 )]
+position = Vector2( 1476, -1309 )
+
+[node name="Chicken20" parent="Animals" instance=ExtResource( 68 )]
+position = Vector2( 1187, -646 )
+
+[node name="Wolf" parent="Animals" instance=ExtResource( 71 )]
+position = Vector2( -2307, 2119 )
+
+[node name="Wolf2" parent="Animals" instance=ExtResource( 71 )]
+position = Vector2( 1949, 2103 )
+
+[node name="Wolf3" parent="Animals" instance=ExtResource( 71 )]
+position = Vector2( 1930, -1857 )
+
+[node name="Wolf4" parent="Animals" instance=ExtResource( 71 )]
+position = Vector2( -2015, -1865 )
+
+[node name="Wolf5" parent="Animals" instance=ExtResource( 71 )]
+position = Vector2( -646, -1362 )
+
+[node name="Wolf6" parent="Animals" instance=ExtResource( 71 )]
+position = Vector2( -1722, -614 )
+
+[node name="Wolf7" parent="Animals" instance=ExtResource( 71 )]
+position = Vector2( -1341, 806 )
+
+[node name="Wolf8" parent="Animals" instance=ExtResource( 71 )]
+position = Vector2( -99, 1140 )
+
+[node name="Wolf9" parent="Animals" instance=ExtResource( 71 )]
+position = Vector2( 921, 1290 )
+
+[node name="Wolf10" parent="Animals" instance=ExtResource( 71 )]
+position = Vector2( 1281, 630 )
+
+[node name="Wolf11" parent="Animals" instance=ExtResource( 71 )]
+position = Vector2( 1731, -874 )
+
+[node name="Wolf12" parent="Animals" instance=ExtResource( 71 )]
+position = Vector2( 602, -1675 )
+
+[node name="Bushes" type="Node2D" parent="."]
+
+[node name="Bush1" parent="Bushes" instance=ExtResource( 61 )]
+position = Vector2( -1452, 1732 )
+
+[node name="Bush2" parent="Bushes" instance=ExtResource( 62 )]
+position = Vector2( -1994, 1639 )
+
+[node name="Bush3" parent="Bushes" instance=ExtResource( 63 )]
+position = Vector2( -1825, 2347 )
+
+[node name="Bush4" parent="Bushes" instance=ExtResource( 61 )]
+position = Vector2( -2507, 1992 )
+
+[node name="Bush5" parent="Bushes" instance=ExtResource( 63 )]
+position = Vector2( -1514, 942 )
+
+[node name="Bush6" parent="Bushes" instance=ExtResource( 62 )]
+position = Vector2( 737, 199 )
+
+[node name="Bush7" parent="Bushes" instance=ExtResource( 61 )]
+position = Vector2( 351, -169 )
+
+[node name="Bush8" parent="Bushes" instance=ExtResource( 63 )]
+position = Vector2( -1064, 231 )
+
+[node name="Bush9" parent="Bushes" instance=ExtResource( 62 )]
+position = Vector2( -1916, -28 )
+
+[node name="Bush10" parent="Bushes" instance=ExtResource( 61 )]
+position = Vector2( -1250, -512 )
+
+[node name="Bush11" parent="Bushes" instance=ExtResource( 63 )]
+position = Vector2( -1773, -439 )
+
+[node name="Bush12" parent="Bushes" instance=ExtResource( 61 )]
+position = Vector2( -2476, -891 )
+
+[node name="Bush13" parent="Bushes" instance=ExtResource( 63 )]
+position = Vector2( -2173, -75 )
+
+[node name="Bush14" parent="Bushes" instance=ExtResource( 62 )]
+position = Vector2( -1565, -45 )
+
+[node name="Bush15" parent="Bushes" instance=ExtResource( 63 )]
+position = Vector2( -1532, 471 )
+
+[node name="Bush16" parent="Bushes" instance=ExtResource( 61 )]
+position = Vector2( -2317, 346 )
+
+[node name="Bush17" parent="Bushes" instance=ExtResource( 63 )]
+position = Vector2( -1863, 170 )
+
+[node name="Bush18" parent="Bushes" instance=ExtResource( 62 )]
+position = Vector2( -2108, 818 )
+
+[node name="Bush19" parent="Bushes" instance=ExtResource( 61 )]
+position = Vector2( -2317, 1017 )
+
+[node name="Bush20" parent="Bushes" instance=ExtResource( 63 )]
+position = Vector2( -1581, 1374 )
+
+[node name="Bush21" parent="Bushes" instance=ExtResource( 61 )]
+position = Vector2( -1811, 1705 )
+
+[node name="Bush22" parent="Bushes" instance=ExtResource( 62 )]
+position = Vector2( -1376, 2172 )
+
+[node name="Bush23" parent="Bushes" instance=ExtResource( 61 )]
+position = Vector2( -1076, 2171 )
+
+[node name="Bush24" parent="Bushes" instance=ExtResource( 63 )]
+position = Vector2( -973, 1644 )
+
+[node name="Bush25" parent="Bushes" instance=ExtResource( 61 )]
+position = Vector2( -1028, 1005 )
+
+[node name="Bush26" parent="Bushes" instance=ExtResource( 62 )]
+position = Vector2( -486, 1406 )
+
+[node name="Bush27" parent="Bushes" instance=ExtResource( 63 )]
+position = Vector2( -423, 1910 )
+
+[node name="Bush28" parent="Bushes" instance=ExtResource( 62 )]
+position = Vector2( -264, 2369 )
+
+[node name="Bush29" parent="Bushes" instance=ExtResource( 61 )]
+position = Vector2( -801, 480 )
+
+[node name="Bush30" parent="Bushes" instance=ExtResource( 63 )]
+position = Vector2( -370, 815 )
+
+[node name="Bush31" parent="Bushes" instance=ExtResource( 61 )]
+position = Vector2( 32, 460 )
+
+[node name="Bush32" parent="Bushes" instance=ExtResource( 63 )]
+position = Vector2( 520, 839 )
+
+[node name="Bush33" parent="Bushes" instance=ExtResource( 61 )]
+position = Vector2( 34, 1159 )
+
+[node name="Bush34" parent="Bushes" instance=ExtResource( 63 )]
+position = Vector2( -72, 1788 )
+
+[node name="Bush35" parent="Bushes" instance=ExtResource( 62 )]
+position = Vector2( 630, 1429 )
+
+[node name="Bush36" parent="Bushes" instance=ExtResource( 63 )]
+position = Vector2( 391, 1682 )
+
+[node name="Bush37" parent="Bushes" instance=ExtResource( 61 )]
+position = Vector2( 429, 2029 )
+
+[node name="Bush38" parent="Bushes" instance=ExtResource( 63 )]
+position = Vector2( 237, 2444 )
+
+[node name="Bush39" parent="Bushes" instance=ExtResource( 62 )]
+position = Vector2( 809, 1902 )
+
+[node name="Bush40" parent="Bushes" instance=ExtResource( 63 )]
+position = Vector2( 1082, 2128 )
+
+[node name="Bush41" parent="Bushes" instance=ExtResource( 61 )]
+position = Vector2( 1073, 1439 )
+
+[node name="Bush42" parent="Bushes" instance=ExtResource( 61 )]
+position = Vector2( 1056, 753 )
+
+[node name="Bush43" parent="Bushes" instance=ExtResource( 63 )]
+position = Vector2( 988, 1127 )
+
+[node name="Bush44" parent="Bushes" instance=ExtResource( 62 )]
+position = Vector2( 1429, 1122 )
+
+[node name="Bush45" parent="Bushes" instance=ExtResource( 61 )]
+position = Vector2( 1454, 1518 )
+
+[node name="Bush46" parent="Bushes" instance=ExtResource( 63 )]
+position = Vector2( 1531, 2072 )
+
+[node name="Bush47" parent="Bushes" instance=ExtResource( 61 )]
+position = Vector2( 1827, 2239 )
+
+[node name="Bush48" parent="Bushes" instance=ExtResource( 61 )]
+position = Vector2( 1906, 1710 )
+
+[node name="Bush49" parent="Bushes" instance=ExtResource( 62 )]
+position = Vector2( 1914, 1201 )
+
+[node name="Bush50" parent="Bushes" instance=ExtResource( 62 )]
+position = Vector2( 712, 560 )
+
+[node name="Bush51" parent="Bushes" instance=ExtResource( 63 )]
+position = Vector2( -145, 24 )
+
+[node name="Bush52" parent="Bushes" instance=ExtResource( 61 )]
+position = Vector2( 1200, 241 )
+
+[node name="Bush53" parent="Bushes" instance=ExtResource( 63 )]
+position = Vector2( 1909, 228 )
+
+[node name="Bush54" parent="Bushes" instance=ExtResource( 62 )]
+position = Vector2( 1994, 648 )
+
+[node name="Bush55" parent="Bushes" instance=ExtResource( 61 )]
+position = Vector2( 779, 2351 )
+
+[node name="Bush56" parent="Bushes" instance=ExtResource( 63 )]
+position = Vector2( -1863, -957 )
+
+[node name="Bush57" parent="Bushes" instance=ExtResource( 61 )]
+position = Vector2( -2110, -1289 )
+
+[node name="Bush58" parent="Bushes" instance=ExtResource( 62 )]
+position = Vector2( -2029, -1512 )
+
+[node name="Bush59" parent="Bushes" instance=ExtResource( 61 )]
+position = Vector2( -1428, -1478 )
+
+[node name="Bush60" parent="Bushes" instance=ExtResource( 63 )]
+position = Vector2( -1502, -1752 )
+
+[node name="Bush61" parent="Bushes" instance=ExtResource( 62 )]
+position = Vector2( -1110, -1686 )
+
+[node name="Bush62" parent="Bushes" instance=ExtResource( 61 )]
+position = Vector2( -958, -1493 )
+
+[node name="Bush63" parent="Bushes" instance=ExtResource( 63 )]
+position = Vector2( -1080, -1010 )
+
+[node name="Bush64" parent="Bushes" instance=ExtResource( 61 )]
+position = Vector2( -1520, -837 )
+
+[node name="Bush65" parent="Bushes" instance=ExtResource( 62 )]
+position = Vector2( -605, -817 )
+
+[node name="Bush66" parent="Bushes" instance=ExtResource( 61 )]
+position = Vector2( -961, -701 )
+
+[node name="Bush67" parent="Bushes" instance=ExtResource( 62 )]
+position = Vector2( -1025, -79 )
+
+[node name="Bush68" parent="Bushes" instance=ExtResource( 63 )]
+position = Vector2( -557, -192 )
+
+[node name="Bush69" parent="Bushes" instance=ExtResource( 61 )]
+position = Vector2( -353, -483 )
+
+[node name="Bush70" parent="Bushes" instance=ExtResource( 62 )]
+position = Vector2( -375, -634 )
+
+[node name="Bush71" parent="Bushes" instance=ExtResource( 63 )]
+position = Vector2( -389, -1238 )
+
+[node name="Bush72" parent="Bushes" instance=ExtResource( 62 )]
+position = Vector2( -97, -1364 )
+
+[node name="Bush73" parent="Bushes" instance=ExtResource( 63 )]
+position = Vector2( -532, -1733 )
+
+[node name="Bush74" parent="Bushes" instance=ExtResource( 61 )]
+position = Vector2( 57, -739 )
+
+[node name="Bush75" parent="Bushes" instance=ExtResource( 63 )]
+position = Vector2( 110, -1042 )
+
+[node name="Bush76" parent="Bushes" instance=ExtResource( 62 )]
+position = Vector2( 59, -1694 )
+
+[node name="Bush77" parent="Bushes" instance=ExtResource( 61 )]
+position = Vector2( 409, -1300 )
+
+[node name="Bush78" parent="Bushes" instance=ExtResource( 63 )]
+position = Vector2( 279, -1541 )
+
+[node name="Bush79" parent="Bushes" instance=ExtResource( 62 )]
+position = Vector2( 490, -1904 )
+
+[node name="Bush80" parent="Bushes" instance=ExtResource( 62 )]
+position = Vector2( -839, -1945 )
+
+[node name="Bush81" parent="Bushes" instance=ExtResource( 61 )]
+position = Vector2( -1361, -2154 )
+
+[node name="Bush82" parent="Bushes" instance=ExtResource( 63 )]
+position = Vector2( -2055, -1936 )
+
+[node name="Bush83" parent="Bushes" instance=ExtResource( 62 )]
+position = Vector2( -1763, -2109 )
+
+[node name="Bush84" parent="Bushes" instance=ExtResource( 61 )]
+position = Vector2( -2353, -2150 )
+
+[node name="Bush85" parent="Bushes" instance=ExtResource( 63 )]
+position = Vector2( -420, -2083 )
+
+[node name="Bush86" parent="Bushes" instance=ExtResource( 62 )]
+position = Vector2( -52, -2171 )
+
+[node name="Bush87" parent="Bushes" instance=ExtResource( 61 )]
+position = Vector2( 743, -2174 )
+
+[node name="Bush88" parent="Bushes" instance=ExtResource( 63 )]
+position = Vector2( 816, -1592 )
+
+[node name="Bush89" parent="Bushes" instance=ExtResource( 61 )]
+position = Vector2( 786, -1082 )
+
+[node name="Bush90" parent="Bushes" instance=ExtResource( 62 )]
+position = Vector2( 557, -670 )
+
+[node name="Bush91" parent="Bushes" instance=ExtResource( 61 )]
+position = Vector2( 875, -649 )
+
+[node name="Bush92" parent="Bushes" instance=ExtResource( 63 )]
+position = Vector2( 961, -240 )
+
+[node name="Bush93" parent="Bushes" instance=ExtResource( 62 )]
+position = Vector2( 1362, -77 )
+
+[node name="Bush94" parent="Bushes" instance=ExtResource( 61 )]
+position = Vector2( 1200, -927 )
+
+[node name="Bush95" parent="Bushes" instance=ExtResource( 63 )]
+position = Vector2( 1578, -1121 )
+
+[node name="Bush96" parent="Bushes" instance=ExtResource( 62 )]
+position = Vector2( 1314, -1350 )
+
+[node name="Bush97" parent="Bushes" instance=ExtResource( 63 )]
+position = Vector2( 1507, -1752 )
+
+[node name="Bush98" parent="Bushes" instance=ExtResource( 61 )]
+position = Vector2( 1850, -1349 )
+
+[node name="Bush99" parent="Bushes" instance=ExtResource( 63 )]
+position = Vector2( 1543, -476 )
+
+[node name="Bush100" parent="Bushes" instance=ExtResource( 62 )]
+position = Vector2( 1973, -236 )
+
+[node name="Bush101" parent="Bushes" instance=ExtResource( 61 )]
+position = Vector2( 1703, -87 )
+
+[node name="Bush102" parent="Bushes" instance=ExtResource( 63 )]
+position = Vector2( 1980, -686 )
+
+[node name="Bush103" parent="Bushes" instance=ExtResource( 62 )]
+position = Vector2( 1941, -1565 )
+
+[node name="Bush104" parent="Bushes" instance=ExtResource( 61 )]
+position = Vector2( 1407, -2220 )
+
+[node name="Player" type="KinematicBody2D" parent="."]
+collision_mask = 17
+script = ExtResource( 9 )
+speed = 75.0
+maxStamina = 3.0
+staminaSpeedFactor = 2.0
+staminaPenalty = 2.0
+maxHealth = 1000
+invincibilityTime = 2.0
+cookedMeatHealthRestore = 200
+uncookedMeatHealthRestore = 30
+damageRecoverySpeed = 2.0
+
+[node name="Sprite" type="Sprite" parent="Player"]
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2( -3, -3.5 )
+shape = SubResource( 1 )
+
+[node name="Weapon" type="Node2D" parent="Player"]
+rotation = 1.5708
+script = ExtResource( 20 )
+
+[node name="InteractLabel" type="Label" parent="Player"]
+margin_left = -20.0
+margin_top = 48.0
+margin_right = 20.0
+margin_bottom = 62.0
+grow_horizontal = 2
+grow_vertical = 2
+align = 1
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CraftingMenu" type="Node2D" parent="Player"]
+visible = false
+script = ExtResource( 11 )
+
+[node name="_MenuArrows" type="Button" parent="Player/CraftingMenu"]
+margin_left = -305.0
+margin_top = -80.0
+margin_right = -191.0
+margin_bottom = -33.0
+hint_tooltip = "Craft TestCraft: TestPickup x 2"
+custom_fonts/font = SubResource( 6 )
+text = "Arrows"
+script = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Arrow1" type="Button" parent="Player/CraftingMenu/_MenuArrows"]
+visible = false
+margin_left = 120.0
+margin_right = 218.0
+margin_bottom = 47.0
+custom_fonts/font = SubResource( 6 )
+text = "Arrow"
+script = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+ingredient1 = 6
+count1 = 1
+ingredient2 = 11
+count2 = 1
+ingredient3 = 3
+count3 = 1
+result = 20
+countResult = 1
+
+[node name="Label" type="Label" parent="Player/CraftingMenu/_MenuArrows/Arrow1"]
+margin_left = 13.0
+margin_top = 39.0
+margin_right = 105.0
+margin_bottom = 70.0
+rect_scale = Vector2( 0.8, 0.8 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_as_outline = 2
+text = "Sharp Rock x1,
+Stick x1,
+Feathers x1"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Arrow5" type="Button" parent="Player/CraftingMenu/_MenuArrows"]
+visible = false
+margin_left = 224.0
+margin_right = 365.0
+margin_bottom = 47.0
+custom_fonts/font = SubResource( 6 )
+text = "Arrow x5"
+script = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+ingredient1 = 6
+count1 = 3
+ingredient2 = 11
+count2 = 3
+ingredient3 = 3
+count3 = 3
+result = 20
+countResult = 5
+
+[node name="Label" type="Label" parent="Player/CraftingMenu/_MenuArrows/Arrow5"]
+margin_left = 33.3333
+margin_top = 39.0
+margin_right = 125.333
+margin_bottom = 70.0
+rect_scale = Vector2( 0.8, 0.8 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_as_outline = 2
+text = "Sharp Rock x3,
+Stick x3,
+Feathers x3"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Arrow10" type="Button" parent="Player/CraftingMenu/_MenuArrows"]
+visible = false
+margin_left = 371.0
+margin_right = 529.0
+margin_bottom = 47.0
+custom_fonts/font = SubResource( 6 )
+text = "Arrow x10"
+script = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+ingredient1 = 6
+count1 = 5
+ingredient2 = 11
+count2 = 5
+ingredient3 = 3
+count3 = 5
+result = 20
+countResult = 10
+
+[node name="Label" type="Label" parent="Player/CraftingMenu/_MenuArrows/Arrow10"]
+margin_left = 42.0
+margin_top = 39.0
+margin_right = 134.0
+margin_bottom = 70.0
+rect_scale = Vector2( 0.8, 0.8 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_as_outline = 2
+text = "Sharp Rock x5,
+Stick x5,
+Feathers x5"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="_MenuArmor" type="Button" parent="Player/CraftingMenu"]
+margin_left = -305.0
+margin_top = -131.0
+margin_right = -205.0
+margin_bottom = -84.0
+hint_tooltip = "Craft TestCraft: TestPickup x 2"
+custom_fonts/font = SubResource( 6 )
+text = "Armor"
+script = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Gambeson" type="Button" parent="Player/CraftingMenu/_MenuArmor"]
+visible = false
+margin_left = 106.0
+margin_right = 257.0
+margin_bottom = 47.0
+custom_fonts/font = SubResource( 6 )
+text = "Gambeson"
+script = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+ingredient1 = 12
+count1 = 5
+result = 13
+countResult = 1
+
+[node name="Label" type="Label" parent="Player/CraftingMenu/_MenuArmor/Gambeson"]
+margin_left = 41.0
+margin_top = 39.0
+margin_right = 133.0
+margin_bottom = 53.0
+rect_scale = Vector2( 0.8, 0.8 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_as_outline = 2
+text = "Fabric x5"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Plate Mail" type="Button" parent="Player/CraftingMenu/_MenuArmor"]
+visible = false
+margin_left = 261.0
+margin_right = 429.0
+margin_bottom = 47.0
+custom_fonts/font = SubResource( 6 )
+text = "Plate Mail"
+script = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+ingredient1 = 5
+count1 = 10
+result = 14
+countResult = 1
+requiredArmor = 13
+cutsceneOrNone = 12
+
+[node name="Label" type="Label" parent="Player/CraftingMenu/_MenuArmor/Plate Mail"]
+margin_left = 35.0
+margin_top = 39.0
+margin_right = 161.0
+margin_bottom = 70.0
+rect_scale = Vector2( 0.8, 0.8 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_as_outline = 2
+text = "Iron x10
+Requires gambeson"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="_MenuWeapons" type="Button" parent="Player/CraftingMenu"]
+margin_left = -305.0
+margin_top = -182.0
+margin_right = -159.0
+margin_bottom = -135.0
+hint_tooltip = "Craft TestCraft: TestPickup x 2"
+custom_fonts/font = SubResource( 6 )
+text = "Weapons"
+script = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Club" type="Button" parent="Player/CraftingMenu/_MenuWeapons"]
+visible = false
+margin_left = 152.0
+margin_right = 235.0
+margin_bottom = 47.0
+custom_fonts/font = SubResource( 6 )
+text = "Club"
+script = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+ingredient1 = 2
+count1 = 4
+ingredient2 = 6
+count2 = 2
+result = 15
+countResult = 1
+
+[node name="Label" type="Label" parent="Player/CraftingMenu/_MenuWeapons/Club"]
+margin_top = 39.0
+margin_right = 106.0
+margin_bottom = 53.0
+rect_scale = Vector2( 0.8, 0.8 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_as_outline = 2
+text = "Rock x4, Stick x2"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Knife" type="Button" parent="Player/CraftingMenu/_MenuWeapons"]
+visible = false
+margin_left = 330.333
+margin_right = 422.333
+margin_bottom = 47.0
+custom_fonts/font = SubResource( 6 )
+text = "Knife"
+script = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+ingredient1 = 3
+count1 = 3
+ingredient2 = 7
+count2 = 2
+result = 16
+countResult = 1
+cutsceneOrNone = 5
+
+[node name="Label" type="Label" parent="Player/CraftingMenu/_MenuWeapons/Knife"]
+margin_left = 10.6667
+margin_top = 39.0
+margin_right = 98.6667
+margin_bottom = 53.0
+rect_scale = Vector2( 0.8, 0.8 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_as_outline = 2
+text = "Sharp Rock x3,
+Wood x2"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ax" type="Button" parent="Player/CraftingMenu/_MenuWeapons"]
+visible = false
+margin_left = 241.333
+margin_right = 324.333
+margin_bottom = 47.0
+custom_fonts/font = SubResource( 6 )
+text = "Ax"
+script = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+ingredient1 = 5
+count1 = 1
+ingredient2 = 6
+count2 = 6
+result = 17
+countResult = 1
+cutsceneOrNone = 6
+
+[node name="Label" type="Label" parent="Player/CraftingMenu/_MenuWeapons/Ax"]
+margin_left = 0.999968
+margin_top = 39.0
+margin_right = 103.0
+margin_bottom = 53.0
+rect_scale = Vector2( 0.8, 0.8 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_as_outline = 2
+text = "Iron x2, Stick x6"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Bow" type="Button" parent="Player/CraftingMenu/_MenuWeapons"]
+visible = false
+margin_left = 428.0
+margin_right = 511.0
+margin_bottom = 47.0
+custom_fonts/font = SubResource( 6 )
+text = "Bow"
+script = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+ingredient1 = 7
+count1 = 5
+ingredient2 = 21
+count2 = 2
+result = 18
+countResult = 1
+cutsceneOrNone = 17
+
+[node name="Label" type="Label" parent="Player/CraftingMenu/_MenuWeapons/Bow"]
+margin_left = 4.99997
+margin_top = 39.0
+margin_right = 97.0
+margin_bottom = 53.0
+rect_scale = Vector2( 0.8, 0.8 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_as_outline = 2
+text = "Wood x5,
+Rope x2"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sword" type="Button" parent="Player/CraftingMenu/_MenuWeapons"]
+visible = false
+margin_left = 517.0
+margin_right = 610.0
+margin_bottom = 47.0
+custom_fonts/font = SubResource( 6 )
+text = "Sword"
+script = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+ingredient1 = 5
+count1 = 10
+ingredient2 = 7
+count2 = 2
+result = 19
+countResult = 1
+cutsceneOrNone = 16
+
+[node name="Label" type="Label" parent="Player/CraftingMenu/_MenuWeapons/Sword"]
+margin_left = 26.0
+margin_top = 39.0
+margin_right = 79.0
+margin_bottom = 53.0
+rect_scale = Vector2( 0.8, 0.8 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_as_outline = 2
+text = "Iron x10,
+Wood x2"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="_MenuIngredients" type="Button" parent="Player/CraftingMenu"]
+margin_left = -305.0
+margin_top = -233.0
+margin_right = -135.0
+margin_bottom = -186.0
+hint_tooltip = "Craft TestCraft: TestPickup x 2"
+custom_fonts/font = SubResource( 6 )
+text = "Ingredients"
+script = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SharpRock" type="Button" parent="Player/CraftingMenu/_MenuIngredients"]
+visible = false
+margin_left = 176.0
+margin_right = 350.0
+margin_bottom = 47.0
+custom_fonts/font = SubResource( 6 )
+text = "Sharp Rock"
+script = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+ingredient1 = 2
+count1 = 2
+result = 3
+countResult = 1
+
+[node name="Label" type="Label" parent="Player/CraftingMenu/_MenuIngredients/SharpRock"]
+margin_left = 61.0
+margin_top = 39.0
+margin_right = 110.0
+margin_bottom = 53.0
+rect_scale = Vector2( 0.8, 0.8 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_as_outline = 2
+text = "Rock x2"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Rope" type="Button" parent="Player/CraftingMenu/_MenuIngredients"]
+visible = false
+margin_left = 356.0
+margin_right = 479.0
+margin_bottom = 47.0
+custom_fonts/font = SubResource( 6 )
+text = "Rope"
+script = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+ingredient1 = 10
+count1 = 2
+result = 21
+countResult = 1
+cutsceneOrNone = 10
+
+[node name="Label" type="Label" parent="Player/CraftingMenu/_MenuIngredients/Rope"]
+margin_left = 37.0
+margin_top = 39.0
+margin_right = 97.0
+margin_bottom = 53.0
+rect_scale = Vector2( 0.8, 0.8 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_as_outline = 2
+text = "Wheat x2"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fabric" type="Button" parent="Player/CraftingMenu/_MenuIngredients"]
+visible = false
+margin_left = 485.0
+margin_right = 608.0
+margin_bottom = 47.0
+custom_fonts/font = SubResource( 6 )
+text = "Fabric"
+script = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+ingredient1 = 10
+count1 = 3
+result = 12
+countResult = 1
+
+[node name="Label" type="Label" parent="Player/CraftingMenu/_MenuIngredients/Fabric"]
+margin_left = 37.0
+margin_top = 39.0
+margin_right = 97.0
+margin_bottom = 53.0
+rect_scale = Vector2( 0.8, 0.8 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_as_outline = 2
+text = "Wheat x3"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Player/CraftingMenu"]
+margin_left = -63.0
+margin_top = 64.0
+margin_right = 68.0
+margin_bottom = 109.0
+custom_fonts/font = SubResource( 5 )
+text = "Press Esc to close
+the crafting menu."
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="InteractArea" type="Area2D" parent="Player"]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/InteractArea"]
+position = Vector2( -3, -3.5 )
+scale = Vector2( 1.5116, 1.51259 )
+shape = SubResource( 11 )
+
+[node name="StaminaBar" type="ColorRect" parent="Player"]
+visible = false
+margin_left = -38.0
+margin_top = -31.0
+margin_right = 32.0
+margin_bottom = -23.0
+color = Color( 0, 1, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DamageBar" type="TextureRect" parent="Player"]
+visible = false
+margin_left = 32.0
+margin_top = -23.0
+margin_right = 102.0
+margin_bottom = -15.0
+rect_rotation = 180.0
+texture = ExtResource( 18 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CraftingFinder" type="Node2D" parent="Player"]
+visible = false
+script = ExtResource( 73 )
+showDistance = 400.0
+
+[node name="Arrow" type="Sprite" parent="Player/CraftingFinder"]
+modulate = Color( 1, 1, 1, 0.501961 )
+position = Vector2( 52, 0 )
+rotation = 1.5708
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 72 )
+
+[node name="Stump" type="Sprite" parent="Player/CraftingFinder"]
+modulate = Color( 1, 1, 1, 0.501961 )
+position = Vector2( 46, 0 )
+rotation = 1.5708
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 10 )
+
+[node name="Inventory" type="CanvasLayer" parent="."]
+script = ExtResource( 15 )
+
+[node name="Container" type="Node2D" parent="Inventory"]
+visible = false
+
+[node name="Background" type="Sprite" parent="Inventory/Container"]
+position = Vector2( 512, 300 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 14 )
+
+[node name="Rock" type="Node2D" parent="Inventory/Container"]
+position = Vector2( 0, 32 )
+script = ExtResource( 17 )
+item = 2
+
+[node name="Rock" type="Sprite" parent="Inventory/Container/Rock"]
+position = Vector2( 100, 100 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 48 )
+
+[node name="Count" type="Label" parent="Inventory/Container/Rock"]
+margin_left = 119.0
+margin_top = 82.0
+margin_right = 340.0
+margin_bottom = 121.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 7 )
+text = "Rock: XX"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SharpRock" type="Node2D" parent="Inventory/Container"]
+position = Vector2( 0, 97 )
+script = ExtResource( 17 )
+item = 3
+
+[node name="SharpRock" type="Sprite" parent="Inventory/Container/SharpRock"]
+position = Vector2( 99, 100 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 55 )
+
+[node name="Count" type="Label" parent="Inventory/Container/SharpRock"]
+margin_left = 119.0
+margin_top = 82.0
+margin_right = 340.0
+margin_bottom = 121.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 7 )
+text = "Sharp Rock: XX"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Flint" type="Node2D" parent="Inventory/Container"]
+position = Vector2( 0, 292 )
+script = ExtResource( 17 )
+item = 4
+
+[node name="Flint (Modulated)" type="Sprite" parent="Inventory/Container/Flint"]
+modulate = Color( 0.545098, 0.545098, 0.545098, 1 )
+position = Vector2( 99, 100 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 48 )
+
+[node name="Count" type="Label" parent="Inventory/Container/Flint"]
+margin_left = 119.0
+margin_top = 82.0
+margin_right = 340.0
+margin_bottom = 121.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 7 )
+text = "Flint: XX"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Iron" type="Node2D" parent="Inventory/Container"]
+position = Vector2( 0, 357 )
+script = ExtResource( 17 )
+item = 5
+
+[node name="Iron" type="Sprite" parent="Inventory/Container/Iron"]
+position = Vector2( 93, 100 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 53 )
+
+[node name="Count" type="Label" parent="Inventory/Container/Iron"]
+margin_left = 119.0
+margin_top = 82.0
+margin_right = 340.0
+margin_bottom = 121.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 7 )
+text = "Iron: XX"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Wood" type="Node2D" parent="Inventory/Container"]
+position = Vector2( 0, 227 )
+script = ExtResource( 17 )
+item = 7
+
+[node name="Wood" type="Sprite" parent="Inventory/Container/Wood"]
+position = Vector2( 100, 100 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 49 )
+
+[node name="Count" type="Label" parent="Inventory/Container/Wood"]
+margin_left = 119.0
+margin_top = 82.0
+margin_right = 340.0
+margin_bottom = 121.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 7 )
+text = "Wood: XX"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Stick" type="Node2D" parent="Inventory/Container"]
+position = Vector2( 0, 162 )
+script = ExtResource( 17 )
+item = 6
+
+[node name="Stick" type="Sprite" parent="Inventory/Container/Stick"]
+position = Vector2( 100, 104 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 54 )
+
+[node name="Count" type="Label" parent="Inventory/Container/Stick"]
+margin_left = 119.0
+margin_top = 82.0
+margin_right = 340.0
+margin_bottom = 121.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 7 )
+text = "Stick: XX"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Meat" type="Node2D" parent="Inventory/Container"]
+position = Vector2( 300, 32 )
+script = ExtResource( 17 )
+item = 8
+
+[node name="Meat" type="Sprite" parent="Inventory/Container/Meat"]
+position = Vector2( 95, 100 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 27 )
+
+[node name="Count" type="Label" parent="Inventory/Container/Meat"]
+margin_left = 119.0
+margin_top = 82.0
+margin_right = 340.0
+margin_bottom = 121.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 7 )
+text = "Meat: XX"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CookedMeat" type="Node2D" parent="Inventory/Container"]
+position = Vector2( 300, 97 )
+script = ExtResource( 17 )
+item = 9
+
+[node name="CookedMeat" type="Sprite" parent="Inventory/Container/CookedMeat"]
+position = Vector2( 91, 100 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 57 )
+
+[node name="Count" type="Label" parent="Inventory/Container/CookedMeat"]
+margin_left = 119.0
+margin_top = 82.0
+margin_right = 340.0
+margin_bottom = 121.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 7 )
+text = "Cooked Meat: XX"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Wheat" type="Node2D" parent="Inventory/Container"]
+position = Vector2( 300, 162 )
+script = ExtResource( 17 )
+item = 10
+
+[node name="Wheat" type="Sprite" parent="Inventory/Container/Wheat"]
+position = Vector2( 95, 100 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 58 )
+
+[node name="Count" type="Label" parent="Inventory/Container/Wheat"]
+margin_left = 119.0
+margin_top = 82.0
+margin_right = 340.0
+margin_bottom = 121.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 7 )
+text = "Wheat: XX"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Feathers" type="Node2D" parent="Inventory/Container"]
+position = Vector2( 300, 227 )
+script = ExtResource( 17 )
+item = 11
+
+[node name="Feathers" type="Sprite" parent="Inventory/Container/Feathers"]
+position = Vector2( 95, 108 )
+rotation = 0.314159
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 16 )
+
+[node name="Count" type="Label" parent="Inventory/Container/Feathers"]
+margin_left = 119.0
+margin_top = 82.0
+margin_right = 340.0
+margin_bottom = 121.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 7 )
+text = "Feathers: XX"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fabric" type="Node2D" parent="Inventory/Container"]
+position = Vector2( 300, 292 )
+script = ExtResource( 17 )
+item = 12
+
+[node name="Fabric" type="Sprite" parent="Inventory/Container/Fabric"]
+position = Vector2( 95, 100 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 56 )
+
+[node name="Count" type="Label" parent="Inventory/Container/Fabric"]
+margin_left = 119.0
+margin_top = 82.0
+margin_right = 340.0
+margin_bottom = 121.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 7 )
+text = "Fabric: XX"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Arrow" type="Node2D" parent="Inventory/Container"]
+position = Vector2( 655, 418 )
+script = ExtResource( 17 )
+item = 20
+
+[node name="Arrow" type="Sprite" parent="Inventory/Container/Arrow"]
+position = Vector2( 105, 106 )
+scale = Vector2( 0.5, -0.5 )
+texture = ExtResource( 19 )
+
+[node name="Count" type="Label" parent="Inventory/Container/Arrow"]
+margin_left = 119.0
+margin_top = 82.0
+margin_right = 340.0
+margin_bottom = 121.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 7 )
+text = "Arrow: XX"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Rope" type="Node2D" parent="Inventory/Container"]
+position = Vector2( 300, 357 )
+script = ExtResource( 17 )
+item = 21
+
+[node name="Rope" type="Sprite" parent="Inventory/Container/Rope"]
+position = Vector2( 100, 97 )
+scale = Vector2( 0.5, -0.5 )
+texture = ExtResource( 74 )
+
+[node name="Count" type="Label" parent="Inventory/Container/Rope"]
+margin_left = 119.0
+margin_top = 82.0
+margin_right = 340.0
+margin_bottom = 121.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 7 )
+text = "Rope: XX"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fists" type="Node2D" parent="Inventory/Container"]
+position = Vector2( 612, 32 )
+script = ExtResource( 52 )
+weaponName = "Fists"
+
+[node name="Fists" type="Sprite" parent="Inventory/Container/Fists"]
+position = Vector2( 95, 100 )
+rotation = 1.5708
+scale = Vector2( -0.5, 0.5 )
+texture = ExtResource( 51 )
+
+[node name="Count" type="Label" parent="Inventory/Container/Fists"]
+margin_left = 124.0
+margin_top = 82.0
+margin_right = 345.0
+margin_bottom = 121.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 7 )
+text = "Fists: Equipped"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Club" type="Node2D" parent="Inventory/Container"]
+position = Vector2( 612, 97 )
+script = ExtResource( 52 )
+item = 15
+weaponName = "Club"
+
+[node name="Club" type="Sprite" parent="Inventory/Container/Club"]
+position = Vector2( 100, 107 )
+rotation = 0.523599
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 59 )
+
+[node name="Count" type="Label" parent="Inventory/Container/Club"]
+margin_left = 124.0
+margin_top = 82.0
+margin_right = 345.0
+margin_bottom = 121.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 7 )
+text = "Club: Available"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Knife" type="Node2D" parent="Inventory/Container"]
+position = Vector2( 612, 162 )
+script = ExtResource( 52 )
+item = 16
+weaponName = "Knife"
+
+[node name="Knife" type="Sprite" parent="Inventory/Container/Knife"]
+position = Vector2( 101, 101 )
+rotation = 0.523599
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 46 )
+
+[node name="Count" type="Label" parent="Inventory/Container/Knife"]
+margin_left = 124.0
+margin_top = 82.0
+margin_right = 345.0
+margin_bottom = 121.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 7 )
+text = "Knife: Not Crafted"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ax" type="Node2D" parent="Inventory/Container"]
+position = Vector2( 612, 227 )
+script = ExtResource( 52 )
+item = 17
+weaponName = "Ax"
+
+[node name="Ax" type="Sprite" parent="Inventory/Container/Ax"]
+position = Vector2( 95, 105 )
+rotation = 0.523599
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 42 )
+
+[node name="Count" type="Label" parent="Inventory/Container/Ax"]
+margin_left = 124.0
+margin_top = 82.0
+margin_right = 345.0
+margin_bottom = 121.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 7 )
+text = "Ax: Not Crafted"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Bow" type="Node2D" parent="Inventory/Container"]
+position = Vector2( 612, 357 )
+script = ExtResource( 52 )
+item = 18
+weaponName = "Bow"
+
+[node name="Bow" type="Sprite" parent="Inventory/Container/Bow"]
+position = Vector2( 95, 100 )
+rotation = 0.523599
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 47 )
+
+[node name="Count" type="Label" parent="Inventory/Container/Bow"]
+margin_left = 124.0
+margin_top = 82.0
+margin_right = 345.0
+margin_bottom = 121.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 7 )
+text = "Bow: Not Crafted"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sword" type="Node2D" parent="Inventory/Container"]
+position = Vector2( 612, 292 )
+script = ExtResource( 52 )
+item = 19
+weaponName = "Sword"
+
+[node name="Sword" type="Sprite" parent="Inventory/Container/Sword"]
+position = Vector2( 95, 100 )
+rotation = 0.523599
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 60 )
+
+[node name="Count" type="Label" parent="Inventory/Container/Sword"]
+margin_left = 124.0
+margin_top = 82.0
+margin_right = 345.0
+margin_bottom = 121.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 7 )
+text = "Sword: Not Crafted"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Armor" type="Node2D" parent="Inventory/Container"]
+position = Vector2( 360, 453 )
+script = ExtResource( 50 )
+
+[node name="Sprite" type="Sprite" parent="Inventory/Container/Armor"]
+position = Vector2( 63, 108 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 4 )
+
+[node name="Count" type="Label" parent="Inventory/Container/Armor"]
+margin_left = 119.0
+margin_top = 82.0
+margin_right = 340.0
+margin_bottom = 121.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 7 )
+text = "No armor equipped"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelInventory" type="Label" parent="Inventory/Container"]
+margin_left = 247.0
+margin_top = 16.0
+margin_right = 494.0
+margin_bottom = 93.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 27 )
+text = "Inventory"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelWeapons" type="Label" parent="Inventory/Container"]
+margin_left = 719.0
+margin_top = 24.0
+margin_right = 968.0
+margin_bottom = 101.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 27 )
+text = "Weapons"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelArmor" type="Label" parent="Inventory/Container"]
+margin_left = 191.0
+margin_top = 513.0
+margin_right = 438.0
+margin_bottom = 590.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 27 )
+text = "Armor"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MemoriesScreen" type="CanvasLayer" parent="."]
+script = ExtResource( 23 )
+
+[node name="Container" type="Node2D" parent="MemoriesScreen"]
+visible = false
+
+[node name="Background" type="Sprite" parent="MemoriesScreen/Container"]
+position = Vector2( 512, 300 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 14 )
+
+[node name="WhoAmI" type="Label" parent="MemoriesScreen/Container"]
+margin_left = 119.0
+margin_top = 150.0
+margin_right = 340.0
+margin_bottom = 189.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 7 )
+text = "I can't remember."
+script = ExtResource( 22 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WhyAmIHere" type="Label" parent="MemoriesScreen/Container"]
+margin_left = 600.0
+margin_top = 150.0
+margin_right = 821.0
+margin_bottom = 189.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 7 )
+text = "I can't remember."
+script = ExtResource( 25 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WhoAmITitle" type="Label" parent="MemoriesScreen/Container"]
+margin_left = 119.0
+margin_top = 82.0
+margin_right = 340.0
+margin_bottom = 121.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 7 )
+text = "Who Am I?"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WhyAmIHereTitle" type="Label" parent="MemoriesScreen/Container"]
+margin_left = 600.0
+margin_top = 82.0
+margin_right = 821.0
+margin_bottom = 121.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 7 )
+text = "And Why Am I Here?"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+script = ExtResource( 3 )
+minX = -2500.0
+maxX = 2500.0
+minY = -2500.0
+maxY = 2500.0
+
+[node name="ArrowCountLabel" type="Label" parent="Camera2D"]
+margin_left = -493.0
+margin_top = 245.0
+margin_right = -465.0
+margin_bottom = 284.0
+custom_fonts/font = SubResource( 24 )
+text = "0"
+script = ExtResource( 24 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ArrowCountSprite" type="Sprite" parent="Camera2D"]
+position = Vector2( -492, 268 )
+scale = Vector2( 0.5, -0.5 )
+texture = ExtResource( 19 )
+
+[node name="CutscenePlayer" type="Node2D" parent="Camera2D"]
+script = ExtResource( 1 )
+
+[node name="CutsceneBG" type="Sprite" parent="Camera2D/CutscenePlayer"]
+visible = false
+scale = Vector2( 32, 19 )
+
+[node name="TextBox" type="Node2D" parent="Camera2D/CutscenePlayer"]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="Camera2D/CutscenePlayer/TextBox"]
+margin_left = -450.0
+margin_top = 180.0
+margin_right = 450.0
+margin_bottom = 280.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="Camera2D/CutscenePlayer/TextBox"]
+margin_left = -445.0
+margin_top = 185.0
+margin_right = 445.0
+margin_bottom = 275.0
+color = Color( 0.466667, 0.466667, 0.466667, 0.776471 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollingText" type="Label" parent="Camera2D/CutscenePlayer"]
+visible = false
+margin_left = -440.0
+margin_top = 190.0
+margin_right = 440.0
+margin_bottom = 270.0
+custom_fonts/font = SubResource( 3 )
+autowrap = true
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+secPerCharacter = 0.05
+secsPerSound = 0.08
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Camera2D/CutscenePlayer"]
+
+[node name="Hints" type="Node2D" parent="Camera2D"]
+script = ExtResource( 33 )
+
+[node name="Move" type="Node2D" parent="Camera2D/Hints"]
+visible = false
+
+[node name="Sprite" type="Sprite" parent="Camera2D/Hints/Move"]
+position = Vector2( 189, 280 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 35 )
+
+[node name="Sprite" type="Sprite" parent="Camera2D/Hints/Move/Sprite"]
+scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 34 )
+
+[node name="Label" type="Label" parent="Camera2D/Hints/Move"]
+margin_left = 209.0
+margin_top = 274.0
+margin_right = 500.0
+margin_bottom = 288.0
+text = "Use the arrow keys or WASD to move around."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Inventory" type="Node2D" parent="Camera2D/Hints"]
+visible = false
+
+[node name="Sprite" type="Sprite" parent="Camera2D/Hints/Inventory"]
+position = Vector2( 280, 280 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 35 )
+
+[node name="Label" type="Label" parent="Camera2D/Hints/Inventory"]
+margin_left = 300.0
+margin_top = 274.0
+margin_right = 500.0
+margin_bottom = 288.0
+text = "Press Q to view your inventory."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="Camera2D/Hints/Inventory"]
+margin_left = 271.0
+margin_top = 269.0
+margin_right = 282.0
+margin_bottom = 283.0
+rect_scale = Vector2( 1.6, 1.6 )
+text = "Q"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Memory" type="Node2D" parent="Camera2D/Hints"]
+visible = false
+
+[node name="Sprite" type="Sprite" parent="Camera2D/Hints/Memory"]
+position = Vector2( 224, 280 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 35 )
+
+[node name="Label" type="Label" parent="Camera2D/Hints/Memory"]
+margin_left = 244.0
+margin_top = 274.0
+margin_right = 501.0
+margin_bottom = 288.0
+text = "Press M to view your current memories."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="Camera2D/Hints/Memory"]
+margin_left = 214.0
+margin_top = 270.0
+margin_right = 226.0
+margin_bottom = 284.0
+rect_scale = Vector2( 1.6, 1.6 )
+text = "M"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Eat" type="Node2D" parent="Camera2D/Hints"]
+visible = false
+
+[node name="Sprite" type="Sprite" parent="Camera2D/Hints/Eat"]
+position = Vector2( -36, 280 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 35 )
+
+[node name="Label" type="Label" parent="Camera2D/Hints/Eat"]
+margin_left = -16.0
+margin_top = 274.0
+margin_right = 501.0
+margin_bottom = 288.0
+text = "Press F to eat meat to recover from wounds. Cooked meat recovers more health."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="Camera2D/Hints/Eat"]
+margin_left = -42.0
+margin_top = 271.0
+margin_right = -30.0
+margin_bottom = 285.0
+rect_scale = Vector2( 1.6, 1.6 )
+text = "F"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Craft" type="Node2D" parent="Camera2D/Hints"]
+visible = false
+
+[node name="Label" type="Label" parent="Camera2D/Hints/Craft"]
+margin_left = 41.0
+margin_top = 274.0
+margin_right = 502.0
+margin_bottom = 288.0
+text = "You can craft items from other items by interacting with the tree stump."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="Camera2D/Hints/Craft"]
+position = Vector2( 21, 280 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 35 )
+
+[node name="Label2" type="Label" parent="Camera2D/Hints/Craft"]
+margin_left = 15.0
+margin_top = 270.0
+margin_right = 27.0
+margin_bottom = 284.0
+rect_scale = Vector2( 1.6, 1.6 )
+text = "E"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SwitchWeapons" type="Node2D" parent="Camera2D/Hints"]
+visible = false
+
+[node name="Label" type="Label" parent="Camera2D/Hints/SwitchWeapons"]
+margin_left = 205.0
+margin_top = 274.0
+margin_right = 499.0
+margin_bottom = 288.0
+text = "Use K/L or Z/X to cycle through your weapons."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="Camera2D/Hints/SwitchWeapons"]
+position = Vector2( 178, 280 )
+scale = Vector2( 0.45, 0.3 )
+texture = ExtResource( 35 )
+
+[node name="Label2" type="Label" parent="Camera2D/Hints/SwitchWeapons"]
+margin_left = 163.0
+margin_top = 270.0
+margin_right = 183.0
+margin_bottom = 284.0
+rect_scale = Vector2( 1.6, 1.6 )
+text = "K/L"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprint" type="Node2D" parent="Camera2D/Hints"]
+visible = false
+
+[node name="Sprite" type="Sprite" parent="Camera2D/Hints/Sprint"]
+position = Vector2( 18, 280 )
+scale = Vector2( 0.37, 0.3 )
+texture = ExtResource( 35 )
+
+[node name="Label" type="Label" parent="Camera2D/Hints/Sprint"]
+margin_left = 41.0
+margin_top = 274.0
+margin_right = 499.0
+margin_bottom = 288.0
+text = "Hold Shift to sprint. Sprinting takes stamina, which recharges over time."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="Camera2D/Hints/Sprint"]
+margin_left = 4.0
+margin_top = 274.0
+margin_right = 44.0
+margin_bottom = 288.0
+text = "Shift"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Attack" type="Node2D" parent="Camera2D/Hints"]
+visible = false
+modulate = Color( 1, 1, 1, 0 )
+
+[node name="Sprite" type="Sprite" parent="Camera2D/Hints/Attack"]
+position = Vector2( 170, 280 )
+scale = Vector2( 0.47, 0.3 )
+texture = ExtResource( 35 )
+
+[node name="Label" type="Label" parent="Camera2D/Hints/Attack"]
+margin_left = 196.0
+margin_top = 274.0
+margin_right = 500.0
+margin_bottom = 288.0
+text = "Press Space to attack with your fists or weapon."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="Camera2D/Hints/Attack"]
+margin_left = 152.0
+margin_top = 274.0
+margin_right = 192.0
+margin_bottom = 288.0
+text = "Space"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Camera2D/Hints"]
+anims/ShowAttack = SubResource( 16 )
+anims/ShowCraft = SubResource( 20 )
+anims/ShowEat = SubResource( 19 )
+anims/ShowInventory = SubResource( 17 )
+anims/ShowMemory = SubResource( 18 )
+anims/ShowMove = SubResource( 14 )
+anims/ShowSprint = SubResource( 15 )
+anims/ShowSwitchWeapons = SubResource( 23 )
+
+[node name="PlayerBorderTop" type="StaticBody2D" parent="Camera2D"]
+position = Vector2( 0, -300 )
+collision_layer = 16
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Camera2D/PlayerBorderTop"]
+rotation = 3.14159
+shape = SubResource( 28 )
+
+[node name="PlayerBorderBottom" type="StaticBody2D" parent="Camera2D"]
+position = Vector2( 0, 300 )
+collision_layer = 16
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Camera2D/PlayerBorderBottom"]
+shape = SubResource( 28 )
+
+[node name="PlayerBorderLeft" type="StaticBody2D" parent="Camera2D"]
+position = Vector2( -512, 0 )
+collision_layer = 16
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Camera2D/PlayerBorderLeft"]
+rotation = 1.5708
+shape = SubResource( 29 )
+
+[node name="PlayerBorderRight" type="StaticBody2D" parent="Camera2D"]
+position = Vector2( 512, 0 )
+collision_layer = 16
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Camera2D/PlayerBorderRight"]
+rotation = -1.5708
+shape = SubResource( 29 )
+
+[node name="BGAudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+volume_db = -80.0
+script = ExtResource( 28 )
+bgMusics = [ ExtResource( 32 ), ExtResource( 29 ) ]
+bgCombat = ExtResource( 31 )
+memory = ExtResource( 30 )
+timeAfterCombatToFadeOut = 5.0
+timeBetweenBGTracks = 60.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="BGAudioStreamPlayer"]
+anims/VolumeFadeIn1Sec = SubResource( 12 )
+anims/VolumeFadeOut1Sec = SubResource( 13 )
+
+[node name="CraftSoundEffect" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 26 )
+
+[node name="Flint" parent="." instance=ExtResource( 66 )]
+position = Vector2( -383, -1059 )
+
+[node name="Flint2" parent="." instance=ExtResource( 66 )]
+position = Vector2( 926, 1607 )
+
+[connection signal="animation_finished" from="BGAudioStreamPlayer/AnimationPlayer" to="BGAudioStreamPlayer" method="_AnimationFinished"]

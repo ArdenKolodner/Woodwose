@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/bm2.mp3-3fab08aa1f1443d61323e601f0cfe64a.mp3str"
+
+[deps]
+
+source_file="res://Audio/BassMed/bm2.mp3"
+dest_files=[ "res://.import/bm2.mp3-3fab08aa1f1443d61323e601f0cfe64a.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

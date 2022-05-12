@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/_bg2 Tower'd Camelot.mp3-3a8c9cca483f2c5a0bf8c7fea61ea777.mp3str"
+
+[deps]
+
+source_file="res://Audio/_bg2 Tower'd Camelot.mp3"
+dest_files=[ "res://.import/_bg2 Tower'd Camelot.mp3-3a8c9cca483f2c5a0bf8c7fea61ea777.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

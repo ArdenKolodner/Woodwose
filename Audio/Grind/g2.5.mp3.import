@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/g2.5.mp3-32f060754870f3392692d98690715d77.mp3str"
+
+[deps]
+
+source_file="res://Audio/Grind/g2.5.mp3"
+dest_files=[ "res://.import/g2.5.mp3-32f060754870f3392692d98690715d77.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

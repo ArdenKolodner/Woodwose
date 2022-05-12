@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/v1.5.mp3-9f5cee57e906a057620419b08d32cc8c.mp3str"
+
+[deps]
+
+source_file="res://Audio/AquaticVoice/v1.5.mp3"
+dest_files=[ "res://.import/v1.5.mp3-9f5cee57e906a057620419b08d32cc8c.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

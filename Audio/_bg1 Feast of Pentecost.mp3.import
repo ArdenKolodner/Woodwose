@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/_bg1 Feast of Pentecost.mp3-5c6430e4d448d6a08e375d1037ac5712.mp3str"
+
+[deps]
+
+source_file="res://Audio/_bg1 Feast of Pentecost.mp3"
+dest_files=[ "res://.import/_bg1 Feast of Pentecost.mp3-5c6430e4d448d6a08e375d1037ac5712.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

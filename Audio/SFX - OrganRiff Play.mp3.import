@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/SFX - OrganRiff Play.mp3-65ccff6a1d005b5f28b4ca44569f33ff.mp3str"
+
+[deps]
+
+source_file="res://Audio/SFX - OrganRiff Play.mp3"
+dest_files=[ "res://.import/SFX - OrganRiff Play.mp3-65ccff6a1d005b5f28b4ca44569f33ff.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

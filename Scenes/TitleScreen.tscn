@@ -1,0 +1,132 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Textures/Rocks.png" type="Texture" id=1]
+[ext_resource path="res://Textures/Title extra outline.png" type="Texture" id=2]
+[ext_resource path="res://Seagram.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Scripts/PlayButton.cs" type="Script" id=4]
+[ext_resource path="res://Audio/SFX - OrganRiff Play.mp3" type="AudioStream" id=5]
+[ext_resource path="res://Audio/SFX - Startup.mp3" type="AudioStream" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+size = 100
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 48
+outline_size = 4
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 20
+outline_size = 4
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 20
+outline_size = 4
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 3 )
+
+[node name="TitleScreen" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 0.254, 0.254 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 4032, 2362.5 )
+
+[node name="Title" type="Sprite" parent="Sprite"]
+position = Vector2( 0, -661.417 )
+scale = Vector2( 1.9685, 1.9685 )
+texture = ExtResource( 2 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+
+[node name="BeginButton" type="Button" parent="."]
+modulate = Color( 1, 1, 1, 0.823529 )
+margin_left = -267.0
+margin_top = 136.0
+margin_right = 267.0
+margin_bottom = 269.0
+custom_fonts/font = SubResource( 1 )
+text = "Begin Game"
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+opacityNotHovered = 0.85
+startup = ExtResource( 6 )
+play = ExtResource( 5 )
+
+[node name="ByLabel" type="Label" parent="."]
+margin_left = -384.0
+margin_top = -56.0
+margin_right = 384.0
+margin_bottom = 136.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "by Arden Kolodner
+Player, Wolf Art by Brooke Randa
+Weapon Art by Alex Heywood"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Disclaimer" type="Label" parent="."]
+margin_left = -463.0
+margin_top = 271.0
+margin_right = 463.0
+margin_bottom = 297.0
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "WARNING: This game does NOT have a save function as of yet. Exiting the game will lose any progress."
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FontCredit" type="Label" parent="."]
+margin_left = -475.0
+margin_top = 180.0
+margin_right = -296.0
+margin_bottom = 235.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Font: Seagram TFB
+by Zanatlija"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColeCredit" type="Label" parent="."]
+margin_left = 316.0
+margin_top = 180.0
+margin_right = 455.0
+margin_bottom = 235.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Featuring art
+by Thomas Cole"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FadeToBlack" type="ColorRect" parent="."]
+visible = false
+modulate = Color( 1, 1, 1, 0 )
+margin_left = -512.0
+margin_top = -300.0
+margin_right = 512.0
+margin_bottom = 300.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]

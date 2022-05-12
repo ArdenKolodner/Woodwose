@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/o2.5.mp3-006b6f83c4a5efb9a7b318934887bbd3.mp3str"
+
+[deps]
+
+source_file="res://Audio/Outbursts/o2.5.mp3"
+dest_files=[ "res://.import/o2.5.mp3-006b6f83c4a5efb9a7b318934887bbd3.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

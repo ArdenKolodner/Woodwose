@@ -8,6 +8,10 @@ export_presets.cfg
 .mono/
 data_*/
 
+# Hidden files
+.DS_Store
+.vs/
+
 # Releases
 *.dmg
 *.pck

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/v2.mp3-0e8bdbbb04e96b6ef19ecae2091c5042.mp3str"
+
+[deps]
+
+source_file="res://Audio/DreamVoice/v2.mp3"
+dest_files=[ "res://.import/v2.mp3-0e8bdbbb04e96b6ef19ecae2091c5042.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
