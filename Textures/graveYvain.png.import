@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/graveUnknown.png-bf213432ca92466d213897e0c18a607a.stex"
+path="res://.import/graveYvain.png-b0096330b0bce7f66e3217d7e66ac85d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graveUnknown.png"
-dest_files=[ "res://.import/graveUnknown.png-bf213432ca92466d213897e0c18a607a.stex" ]
+source_file="res://Textures/graveYvain.png"
+dest_files=[ "res://.import/graveYvain.png-b0096330b0bce7f66e3217d7e66ac85d.stex" ]
 
 [params]
 

@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=2]
 
-[ext_resource path="res://graveUnknown.png" type="Texture" id=1]
+[ext_resource path="res://Textures/graveUnknown.png" type="Texture" id=1]
 [ext_resource path="res://Audio/StringsFlute3/sf3.mp3" type="AudioStream" id=2]
 [ext_resource path="res://Audio/StringsFlute3/sf2.5.mp3" type="AudioStream" id=3]
 [ext_resource path="res://Audio/StringsFlute3/sf2.mp3" type="AudioStream" id=4]
@@ -9,7 +9,7 @@
 [ext_resource path="res://Seagram.ttf" type="DynamicFontData" id=7]
 [ext_resource path="res://Scripts/ScrollingText.cs" type="Script" id=8]
 [ext_resource path="res://Scripts/Cutscene/Death.cs" type="Script" id=9]
-[ext_resource path="res://graveYvain.png" type="Texture" id=10]
+[ext_resource path="res://Textures/graveYvain.png" type="Texture" id=10]
 
 [sub_resource type="DynamicFont" id=1]
 size = 60
