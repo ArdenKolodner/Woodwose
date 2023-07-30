@@ -20,7 +20,9 @@ Woodwose is an adaptation of the 12th-century poem <i>Yvain, the Knight of the L
 
 # Credits
 Player and wolf art by Brooke Randa
+
 Weapon art by Alex Heywood
+
 Featuring (one piece of) art by Thomas Cole: https://www.wikiart.org/en/thomas-cole/the-past-1838
 
 Font: Seagram by zanatlija: https://www.dafont.com/seagram-tfb.font, free for personal use
